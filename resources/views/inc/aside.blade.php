@@ -65,8 +65,8 @@
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
-          <a href="#" class="menu-link">
-            <div class="text-truncate" data-i18n="List">Student Details</div>
+          <a href="/addstudent" class="menu-link">
+            <div class="text-truncate" data-i18n="List">Add Student</div>
           </a>
         </li>
         <li class="menu-item">
@@ -75,8 +75,8 @@
           </a>
         </li>
         <li class="menu-item">
-          <a href="#" class="menu-link">
-            <div class="text-truncate" data-i18n="List">Student Report</div>
+          <a href="/students" class="menu-link">
+            <div class="text-truncate" data-i18n="List">Student List</div>
           </a>
         </li>
         <li class="menu-item">
