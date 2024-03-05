@@ -28,7 +28,7 @@ class CreateTeachersTable extends Migration
 		$table->string('RegionId',20);
 		$table->datetime('DateJoined');
 		$table->string('AddedId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');

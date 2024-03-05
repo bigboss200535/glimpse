@@ -16,7 +16,7 @@ class CreateClassSubjectTable extends Migration
 		$table->string('ClassId',20);
 		$table->string('AddedId',20);
 		$table->string('SystemId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');

@@ -21,7 +21,7 @@ class CreateSystemdataTable extends Migration
 		$table->string('Version',50);
 		$table->string('DefaultLanguage',20)->default('en');
 		$table->string('AddedId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');
