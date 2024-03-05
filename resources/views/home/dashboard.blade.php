@@ -526,8 +526,9 @@
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
-    <!-- <div class="buy-now">
-      <a href="#" target="_blank" class="btn btn-danger btn-buy-now">Upgrade Required</a>
-    </div> -->
-     @include('inc.script')
+    <!-- / Layout wrapper -->
+
+    @include('inc.update')
+
+    @include('inc.script')
  

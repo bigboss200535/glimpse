@@ -20,3 +20,13 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('home/dashboard');
 });
+
+
+Route::get('/students', function () {
+    return view('student/list');
+});
+
+
+Route::get('/addstudent', function () {
+    return view('student/add');
+});
