@@ -10,10 +10,8 @@
     <!-- Menu -->
     @include('inc.aside')
     <!-- / Menu -->
-
    <!-- Layout container -->
   <div class="layout-page">
- 
    <!-- Navbar -->
    @include('inc.topmenu')
    <!-- / Navbar -->
@@ -75,7 +73,7 @@
 </div>
   <!-- / Layout wrapper -->
     @include('inc.update')
-  <script src="{{ asset('vendor/libs/jquery/jquery.js') }}"></script>
+ <!--  <script src="{{ asset('vendor/libs/jquery/jquery.js') }}"></script>
   <script src="{{ asset('vendor/libs/popper/popper.js') }}"></script>
   <script src="{{ asset('vendor/js/bootstrap.js') }}"></script>
   <script src="{{ asset('vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
@@ -90,6 +88,7 @@
   <script src="{{ asset('vendor/libs/@form-validation/bootstrap5.js') }}"></script>
   <script src="{{ asset('vendor/libs/@form-validation/auto-focus.js') }}"></script>
   <script src="{{ asset('js/main.js') }}"></script>
-  <script src="{{ asset('js/tables-datatables-basic.js') }}"></script>
+  <script src="{{ asset('js/tables-datatables-basic.js') }}"></script> 
 </body>
-</html>
+</html>-->
+ @include('inc.script')

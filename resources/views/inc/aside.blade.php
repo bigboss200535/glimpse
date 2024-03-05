@@ -61,7 +61,7 @@
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-user"></i>
         <div class="text-truncate" data-i18n="Users">Student</div>
-         <span class="badge badge-center rounded-pill bg-success ms-auto">4</span>
+         <!-- <span class="badge badge-center rounded-pill bg-success ms-auto">4</span> -->
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
@@ -69,16 +69,17 @@
             <div class="text-truncate" data-i18n="List">Add Student</div>
           </a>
         </li>
+         <li class="menu-item">
+          <a href="/students" class="menu-link">
+            <div class="text-truncate" data-i18n="List">Student List</div>
+          </a>
+        </li>
         <li class="menu-item">
           <a href="#" class="menu-link">
             <div class="text-truncate" data-i18n="List">Student Admission</div>
           </a>
         </li>
-        <li class="menu-item">
-          <a href="/students" class="menu-link">
-            <div class="text-truncate" data-i18n="List">Student List</div>
-          </a>
-        </li>
+       
         <li class="menu-item">
           <a href="#" class="menu-link">
             <div class="text-truncate" data-i18n="List">Guardian</div>
@@ -92,7 +93,7 @@
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-user"></i>
         <div class="text-truncate" data-i18n="Users">Staff</div>
-         <span class="badge badge-center rounded-pill bg-success ms-auto">4</span>
+         <!-- <span class="badge badge-center rounded-pill bg-success ms-auto">4</span> -->
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
