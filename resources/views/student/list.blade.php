@@ -15,7 +15,6 @@
    <!-- Navbar -->
    @include('inc.topmenu')
    <!-- / Navbar -->
-
       <!-- Content wrapper -->
         <div class="content-wrapper">
              <!-- Content -->

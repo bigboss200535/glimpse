@@ -4,21 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <title> Vertical Layouts - Forms | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title> {{ config('app.name') }} |</title>
     <meta name="description" content="Most Powerful &amp; Comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers!" />
     <meta name="keywords" content="dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5">
     <!-- Canonical SEO -->
     <link rel="canonical" href="https://themeselection.com/item/sneat-bootstrap-html-admin-template/">
-
-    <!-- ? PROD Only: Google Tag Manager (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-5DDHKGP');</script>
-    <!-- End Google Tag Manager -->
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon/favicon.ico')}}" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,14 +27,10 @@
     <link rel="stylesheet" href="{{ asset('vendor/libs/flatpickr/flatpickr.css')}}" />
     <link rel="stylesheet" href="{{ asset('vendor/libs/select2/select2.css')}}" />
     <script src="{{ asset('vendor/js/helpers.js')}}"></script>
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
     <script src="{{ asset('vendor/js/template-customizer.js')}}"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="{{ asset('js/config.js')}}"></script>
-    
+    <script src="{{ asset('js/config.js')}}"></script> 
 </head>
-
 <body>
 
   
@@ -61,27 +47,10 @@
  @include('inc.aside')
 <!-- / Menu -->
 
-    
-
     <!-- Layout container -->
     <div class="layout-page">
-      
-      
-
-
-
-<!-- Navbar -->
-
-
-
 
 @include('inc.topmenu')
-  
-
-  
-<!-- / Navbar -->
-
-      
 
       <!-- Content wrapper -->
       <div class="content-wrapper">
