@@ -1,3 +1,4 @@
+  <title>{{ config('app.name') }} | Anywhere, Everywhere</title>
  @include('inc.header')
 <body>
   <noscript>
