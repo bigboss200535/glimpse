@@ -35,7 +35,8 @@
                       <div class="tab-content">
                         <!-- Personal Info -->
                         <div class="tab-pane fade active show" id="form-tabs-personal" role="tabpanel">
-                          <form>
+                          <form method="post" id="student_form_submission">
+                              @csrf
                             <div class="row">
                               <div class="col-md-4 col-sm-4 p-1">
                                 <label class="col-form-label" for="basic-icon-default-fullname">First Name <label class="text-danger" style="font-size: 15px;">*</label></label>
@@ -155,11 +156,11 @@
                                 </div>
                               </div>
                             </div> -->
-                          </form>
+                          <!-- </form> -->
                         </div>
                         <!-- Account Details -->
                         <div class="tab-pane fade" id="form-tabs-account" role="tabpanel">
-                          <form>
+                          <!-- <form> -->
                             <div class="row">
                                <div class="col-md-4 col-sm-4 p-1">
                                   <label class="col-form-label" for="basic-icon-default-fullname">Previous School Attended <label class="text-danger" style="font-size: 15px;">*</label></label>
@@ -214,7 +215,7 @@
                                 </div>
                             </div>
                             </div>
-                            <div class="row mt-4">
+                           <!--  <div class="row mt-4">
                               <div class="col-md-6">
                                 <div class="row justify-content-end">
                                   <div class="col-sm-9">
@@ -223,13 +224,13 @@
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          </form>
+                            </div> -->
+                          <!-- </form> -->
                         </div>
                         <!-- Social Links -->
 
                         <div class="tab-pane fade" id="form-tabs-social" role="tabpanel">
-                          <form>
+                          <!-- <form> -->
                             <div class="row">
                             
                              <div class="col-md-4 col-sm-4 p-2">
@@ -341,7 +342,24 @@
                                 <input type="text" class="form-control" id="basic-icon-default-fullname" placeholder="Guadian's Contact" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" />
                               </div>
                             </div>
-                            <div class="row mt-4">
+                           <!--  <div class="row mt-4">
+                              <div class="col-md-6">
+                                <div class="row justify-content-end">
+                                  <div class="col-sm-9">
+                                    <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
+                                    <button type="reset" class="btn btn-label-secondary">Cancel</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div> -->
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row mt-4">
                               <div class="col-md-6">
                                 <div class="row justify-content-end">
                                   <div class="col-sm-9">
@@ -351,12 +369,7 @@
                                 </div>
                               </div>
                             </div>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
             <!-- </div> -->
             <!-- / Content -->
 

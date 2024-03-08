@@ -10,6 +10,19 @@ use Illuminate\Support\Facades\Hash;
 
 class StudentController extends Controller
 {
+
+    public function index()
+    {
+        // fetch all student which are active and not soft deleted
+        $payers = Student::rightJoin('users', 'users.UserId', '=', 'students.UserId')
+        ->where('students.Archived', 'NO')
+        ->select('students.*', 'students.StudentId AS StudentIdNo', 'users.UserId as UserId', 'users.Fullname')
+        ->orderBy('students.AddedDate', 'desc')
+         // ->limit(20)
+        ->get();
+
+        return view('payer.index', compact('payers'));
+    } 
     public function store(Request $request)
     {
         $validatedData = $request->validate([
