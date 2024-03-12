@@ -30,3 +30,11 @@ Route::get('/students', function () {
 Route::get('/addstudent', function () {
     return view('student/add');
 });
+
+Route::get('/addstaff', function () {
+    return view('user/add');
+});
+
+Route::get('logout', array('uses' => 'MainController@doLogout'));
+
+Route::get('/user/{UserId}', [UserController::class, 'show']);

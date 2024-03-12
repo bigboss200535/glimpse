@@ -46,7 +46,7 @@
   <ul class="menu-inner py-1">
     <!-- Dashboards -->
     <li class="menu-item">
-      <a href="/dashboard" class="menu-link">
+      <a href="{{ url('/dashboard') }}" class="menu-link">
         <i class="menu-icon tf-icons bx bx-home-circle"></i>
         <div class="text-truncate" data-i18n="Dashboards">Home</div>
         <!-- <span class="badge badge-center rounded-pill bg-danger ms-auto">5</span> -->
@@ -97,8 +97,8 @@
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
-          <a href="#" class="menu-link">
-            <div class="text-truncate" data-i18n="List">Staff List</div>
+          <a href="/addstaff" class="menu-link">
+            <div class="text-truncate" data-i18n="List">Add Staff</div>
           </a>
         </li>
         <li class="menu-item">

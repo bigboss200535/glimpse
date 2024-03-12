@@ -20,6 +20,7 @@ return new class extends Migration
                 $table->string('Othername',200);
                 $table->string('Gender',10);
                 $table->string('Contact',20);
+                $table->string('UserId',20);
                 $table->string('IdType',50);
                 $table->string('Relationship',50);
                 $table->string('Address',50);
@@ -34,6 +35,7 @@ return new class extends Migration
                 $table->datetime('ArchiveTime');
                 $table->primary('GuardianId');
                 $table->foreign('StudentId')->references('StudentId')->on('students');
+                $table->foreign('UserId')->references('UserId')->on('users');
         });
     }
 

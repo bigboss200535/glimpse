@@ -23,6 +23,7 @@ class CreatePortfolioTable extends Migration
 			$table->datetime('ArchiveDate');
 			$table->datetime('ArchiveTime');
 			$table->primary('PortfolioId');
+			$table->foreign('UserId')->references('UserId')->on('users');
         });
     }
 

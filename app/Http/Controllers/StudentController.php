@@ -32,7 +32,7 @@ class StudentController extends Controller
             'national_id' => 'nullable|min:3|max:50',
             'address' => 'nullable|min:3|max:150',
             'dob' => 'nullable',
-            'portfolio_id' => 'nullable|min:3|max:50',
+            // 'portfolio_id' => 'nullable|min:3|max:50',
             'religion_id' => 'nullable|min:3|max:50',
             'region_id' => 'nullable|min:3|max:50',
             'date_joined' => 'nullable|min:3|max:50',

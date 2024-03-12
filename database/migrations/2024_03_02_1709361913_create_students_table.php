@@ -20,7 +20,7 @@ class CreateStudentsTable extends Migration
 				$table->string('NationalityId',20);
 				$table->string('Address',150);
 				$table->date('DOB');
-				$table->string('PortfolioId',20);
+				// $table->string('PortfolioId',20);
 				$table->string('ReligionId',20);
 				$table->string('RegionId',20);
 				$table->date('DateJoined');
@@ -44,6 +44,7 @@ class CreateStudentsTable extends Migration
 				$table->datetime('ArchiveDate');
 				$table->datetime('ArchiveTime');
 				$table->primary('StudentId');
+				$table->foreign('UserId')->references('UserId')->on('users');
         });
     }
 

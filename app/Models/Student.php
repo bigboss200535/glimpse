@@ -23,7 +23,7 @@ class Student extends Model
         'NationalityId',
         'Address',
         'DOB',
-        'PortfolioId',
+        // 'PortfolioId',
         'ReligionId',
         'RegionId',
         'DateJoined',

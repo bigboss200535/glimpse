@@ -16,6 +16,7 @@
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
+              @include ('inc.preloader')
             <div class="container-xxl flex-grow-1 container-p-y">
                 <div class="row">
                   <div class="col">
@@ -332,7 +333,6 @@
                                 <input type="text" class="form-control" id="basic-icon-default-fullname" placeholder="Guadian's Address" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" />
                               </div>
                           </div>
-
                              <div class="col-md-4 col-sm-4 p-2">
                             <label class="col-form-label" for="basic-icon-default-fullname">Guadian's Contact</label>
                               <div class="input-group input-group-merge rounded-pill">
@@ -369,21 +369,18 @@
                                 </div>
                               </div>
                             </div>
-
-            <!-- </div> -->
-            <!-- / Content -->
-
-            <!-- Footer -->
-             @include('inc.footer')
-            <!-- / Footer -->
-
+                </div>
+            </div>
+               <!-- / Content -->
+                <!-- Footer -->
+                @include('inc.footer')
+                <!-- / Footer -->
             <div class="content-backdrop fade"></div>
           </div>
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
       </div>
-
       <!-- Overlay -->
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>

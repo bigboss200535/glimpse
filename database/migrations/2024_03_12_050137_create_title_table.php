@@ -4,14 +4,18 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReligionTable extends Migration
+return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
-        Schema::create('religion', function (Blueprint $table) {
-			$table->string('ReligionId',20);
-            $table->string('Religion',50);
-            $table->string('AddedId',20);
+        Schema::create('title', function (Blueprint $table) {
+            $table->string('TitleId',20);
+            $table->string('Title',50);
             $table->string('UserId',20);
             $table->datetime('AddedDate')->useCurrent();
             $table->datetime('UpdatedDate');
@@ -22,13 +26,18 @@ class CreateReligionTable extends Migration
             $table->string('ArchiveId',10);
             $table->datetime('ArchiveDate');
             $table->datetime('ArchiveTime');
-            $table->primary('ReligionId');
+            $table->primary('PeriodId');
             $table->foreign('UserId')->references('UserId')->on('users');
         });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
-        Schema::dropIfExists('religion');
+        Schema::dropIfExists('title');
     }
-}
+};

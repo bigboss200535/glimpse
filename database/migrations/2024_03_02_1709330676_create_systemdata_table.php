@@ -8,12 +8,13 @@ class CreateSystemdataTable extends Migration
 {
     public function up()
     {
-        Schema::create('systemdata', function (Blueprint $table) {
+        Schema::create('system_data', function (Blueprint $table) {
 			$table->string('SystemId',20);
-			$table->string('SystemName',50);
+			$table->string('SystemName',50)->default('GLIMPSE');
 			$table->string('Telephone',100);
 			$table->string('Email',50);
 			$table->string('Website',100);
+			$table->binary('Image');
 			$table->string('Logo',250);
 			$table->string('UserId',20);
 			$table->string('Slogan',100);
@@ -22,7 +23,7 @@ class CreateSystemdataTable extends Migration
 			$table->string('AddedId',20);
 			$table->datetime('AddedDate')->useCurrent();
 			$table->datetime('UpdatedDate');
-			$table->string('UpdatedId',60);
+			$table->string('UpdatedId',20);
 			$table->text('UpdatedNotes');
 			$table->string('Status',10)->default('ACTIVE');
 			$table->string('Archived',10)->default('NO');
@@ -36,6 +37,6 @@ class CreateSystemdataTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('systemdata');
+        Schema::dropIfExists('system_data');
     }
 }

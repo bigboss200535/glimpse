@@ -19,5 +19,6 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js') }}"></script>
     <script src="{{ asset('js/tables-datatables-basic.js') }}"></script>
+    <script src="{{ asset('js/form-wizard-numbered.js') }}"></script>
     </body>
 </html>

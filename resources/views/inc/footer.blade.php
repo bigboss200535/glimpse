@@ -19,3 +19,13 @@
                 </div>
               </div>
             </footer>
+
+  <script>
+            window.addEventListener('load', function() {
+              // After 3 seconds, hide the preloader
+              setTimeout(function() {
+                document.getElementById('preloader').style.display = 'none';
+              }, 3000); 
+              // 3000 milliseconds = 3 seconds
+            });
+</script>

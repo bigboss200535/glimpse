@@ -17,9 +17,9 @@ class SQLSeeder extends Seeder
         // $path: is the path of the script
         // $sql: is the script to be stored (uploads_script.sql)
 
-        $path = base_path() . '/database/seeds/uploads_script.sql';
-        $sql = file_get_contents($path);
-        DB::unprepared($sql);
+        // $path = base_path() . '/database/seeds/uploads_script.sql';
+        // $sql = file_get_contents($path);
+        // DB::unprepared($sql);
     }
 }
 // use->
