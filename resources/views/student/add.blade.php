@@ -83,8 +83,6 @@
                                         <option disabled selected>-select-</option>
                                         <option value="FEMALE">FEMALE</option>
                                         <option value="MALE">MALE</option>
-
-                                        
                                       </select>
                                     </div>
                                 </div>

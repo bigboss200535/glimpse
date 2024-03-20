@@ -35,7 +35,6 @@ class StudentController extends Controller
          return view('student.add', compact('national_id', 'student_region', 'student_religion'));
     }
 
-
     public function store(Request $request)
     {
         $validatedData = $request->validate([
