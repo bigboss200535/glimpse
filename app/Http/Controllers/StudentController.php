@@ -16,10 +16,10 @@ class StudentController extends Controller
     {
         // fetch all student which are active and not soft deleted
         $students = Student::rightJoin('users', 'users.UserId', '=', 'students.UserId')
-        ->where('students.Archived', 'NO')
-        ->select('students.*', 'students.StudentId AS StudentIdNo', 'users.UserId as UserId', 'users.Fullname as Username')
-        ->orderBy('students.AddedDate', 'desc')
-        ->get();
+                ->where('students.Archived', 'NO')
+                ->select('students.*', 'students.StudentId AS StudentIdNo', 'users.UserId as UserId', 'users.Fullname as Username')
+                ->orderBy('students.AddedDate', 'desc')
+                ->get();
         
         return view('student.list', compact('students'));
     } 

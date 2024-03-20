@@ -61,4 +61,4 @@ Route::get('/students', [StudentController::class, 'index']);
 
 Route::get('/addstudent', [StudentController::class, 'create']);
 
-Route::post('payerstore', [StudentController::class, 'store'])->name('payer.store');
+Route::post('studentstore', [StudentController::class, 'store'])->name('payer.store');
