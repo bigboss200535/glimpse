@@ -30,8 +30,9 @@ class StudentController extends Controller
        //display registration form with NATIONALITY and REGion 
          $national_id = DB::table('nationality')->get();
          $student_region = DB::table('region')->get();
+         $student_religion = DB::table('religion')->get();
 
-         return view('student.add', compact('national_id', 'student_region'));
+         return view('student.add', compact('national_id', 'student_region', 'student_religion'));
     }
 
 

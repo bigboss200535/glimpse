@@ -120,10 +120,13 @@
                                       ></span>
                                       <select class="form-select" name="religion" id="religion">
                                         <option value="" disabled selected>-select-</option>
-                                        <option value="CHRISTIANITY">CHRISTIANITY</option>
+                                        @foreach($student_religion as $religion)
+                                          <option value="{{ strtoupper($religion->ReligionId) }}">{{ strtoupper($religion->Religion) }}</option>
+                                        @endforeach
+                                       <!--  <option value="CHRISTIANITY">CHRISTIANITY</option>
                                         <option value="MUSLIM">MUSLIM</option>
                                         <option value="TRADITIONAL">TRADITIONAL</option>
-                                        <option value="OTHERS">OTHERS</option>
+                                        <option value="OTHERS">OTHERS</option> -->
                                       </select>
                                     </div>
                                 </div>
