@@ -21,6 +21,7 @@ return new class extends Migration
                 $table->string('Gender',10);
                 $table->string('Contact',20);
                 $table->string('UserId',20);
+                $table->string('IdName',50);
                 $table->string('IdType',50);
                 $table->string('Relationship',50);
                 $table->string('Address',50);
