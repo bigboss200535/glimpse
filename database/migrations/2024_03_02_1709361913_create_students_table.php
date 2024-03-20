@@ -45,6 +45,9 @@ class CreateStudentsTable extends Migration
 				$table->datetime('ArchiveTime');
 				$table->primary('StudentId');
 				$table->foreign('UserId')->references('UserId')->on('users');
+				$table->foreign('NationalityId')->references('NationalityId')->on('nationality');
+				$table->foreign('ReligionId')->references('ReligionId')->on('religion');
+				$table->foreign('RegionId')->references('RegionId')->on('region');
         });
     }
 

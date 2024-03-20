@@ -57,7 +57,7 @@
         <!-- /Logo -->
         <h4 class="mb-2" align="center">Welcome to {{ config('app.name') }} ! 👋</h4>
         <p class="mb-4">Please sign-in to your account and start the adventure</p>
-        <form id="formAuthentication" class="mb-3" action="{{ route('login.action') }}" method="GET">
+        <form id="formAuthentication" class="mb-3" action="#" method="GET">
           <div class="mb-3">
             <label for="email" class="form-label">Username</label>
             <input type="text" class="form-control" id="email" name="email-username" placeholder="Username" autofocus>

@@ -40,19 +40,19 @@
                               @csrf
                             <div class="row">
                              
-                              <table class="table-border-bottom-0 table table-striped" border="">
+<!--                               <table class="table-border-bottom-0 table">
                                 <tr>
                                   <td>
                                     <div class="col-md-12" align="center">
-                                <!-- <img src="{{ asset('img/avatars/blank.png')}}" height="150px" alt="Profile_phone"> -->
+                                <img src="{{ asset('img/avatars/blank.png')}}" height="150px" alt="Profile_phone">
                                
                               </div>
                                   </td>
                                   <td align="left"> 
-                                     <!-- <input type="file" name="student_picture" align="center"> -->
+                                     <input type="file" name="student_picture" align="center">
                                   </td>
                                 </tr>
-                              </table>
+                              </table> -->
                               <div class="col-md-4 col-sm-4 p-1">
                                 <label class="col-form-label" for="basic-icon-default-fullname">First Name <label class="text-danger" style="font-size: 15px;">*</label></label>
                                   <div class="input-group input-group-merge">

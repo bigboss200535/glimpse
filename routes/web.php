@@ -14,20 +14,17 @@ use Illuminate\Support\Facades\Session;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [AuthController::class, 'index'])->name('login');
+// Route::get('/', [AuthController::class, 'index'])->name('login');
 
-Route::get('login', [AuthController::class, 'index'])->name('login');
-
-Route::post('action-login', [AuthController::class, 'actionLogin'])->name('login.action');
-
+// Route::get('login', [AuthController::class, 'index'])->name('login');
 
 // Route::post('action-login', [AuthController::class, 'actionLogin'])->name('login.action');
 
 
+Route::get('/', function () {
+    return view('auth/login');
+});
 
-// Route::get('/', function () {
-//     return view('auth/login');
-// });
 Route::get('/fee', function () {
     return view('fees/add');
 });
@@ -36,7 +33,6 @@ Route::get('/fee', function () {
 Route::get('/dashboard', function () {
     return view('home/dashboard');
 });
-
 
 
 // Route::get('/students', function () {
