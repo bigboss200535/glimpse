@@ -123,10 +123,6 @@
                                         @foreach($student_religion as $religion)
                                           <option value="{{ strtoupper($religion->ReligionId) }}">{{ strtoupper($religion->Religion) }}</option>
                                         @endforeach
-                                       <!--  <option value="CHRISTIANITY">CHRISTIANITY</option>
-                                        <option value="MUSLIM">MUSLIM</option>
-                                        <option value="TRADITIONAL">TRADITIONAL</option>
-                                        <option value="OTHERS">OTHERS</option> -->
                                       </select>
                                     </div>
                                 </div>
@@ -149,22 +145,6 @@
                                       @foreach($student_region as $region)
                                           <option value="{{ strtoupper($region->RegionId) }}">{{ strtoupper($region->Region) }}</option>
                                         @endforeach
-                                      <!-- <option value="AHAFO">AHAFO</option>
-                                      <option value="ASHANTI">ASHANTI</option> 
-                                      <option value="BONO EAST">BONO EAST</option>
-                                      <option value="BRONG AHAFO">BRONG AHAFO</option>
-                                      <option value="CENTRAL">CENTRAL</option>
-                                      <option value="EASTERN">EASTERN</option>
-                                      <option value="GREATER ACCRA">GREATER ACCRA</option>
-                                      <option value="WESTERN NORTH">WESTERN NORTH</option>
-                                      <option value="NORTHERN">NORTHERN</option>
-                                      <option value="NORTH EAST">NORTH EAST</option>
-                                      <option value="OTI">OTI</option>
-                                      <option value="UPPER EAST">UPPER EAST</option>
-                                      <option value="UPPER WEST">UPPER WEST</option>
-                                      <option value="VOLTA">VOLTA</option>
-                                      <option value="WESTERN">WESTERN</option>
-                                      <option value="SAVANNAH">SAVANNAH</option> -->
                                     </select>
                                   </div>
                               </div>

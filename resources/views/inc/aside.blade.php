@@ -91,7 +91,7 @@
 <!-- -----------------------------------Student------------------------------------------------- -->
     <li class="menu-item">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-user"></i>
+        <i class="menu-icon tf-icons bx bx-chalkboard"></i>
         <div class="text-truncate" data-i18n="Users">Staff</div>
          <!-- <span class="badge badge-center rounded-pill bg-success ms-auto">4</span> -->
       </a>
@@ -104,6 +104,11 @@
         <li class="menu-item">
           <a href="#" class="menu-link">
             <div class="text-truncate" data-i18n="List">Attendance</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link">
+            <div class="text-truncate" data-i18n="List">Promote Students</div>
           </a>
         </li>
         <li class="menu-item">
@@ -121,13 +126,18 @@
     <!-- -----------------------------------Academics------------------------------------------------- -->
     <li class="menu-item">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-user"></i>
-        <div class="text-truncate" data-i18n="Users">Academics</div>
+        <i class="menu-icon tf-icons bx bx-book-reader"></i>
+        <div class="text-truncate" data-i18n="Users">Class</div>
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
           <a href="#" class="menu-link">
             <div class="text-truncate" data-i18n="List">Class Timetable</div>
+          </a>
+        </li>
+         <li class="menu-item">
+          <a href="#" class="menu-link">
+            <div class="text-truncate" data-i18n="List">Assigned Class Teachers</div>
           </a>
         </li>
         <li class="menu-item">
@@ -137,27 +147,57 @@
         </li>
         <li class="menu-item">
           <a href="#" class="menu-link">
-            <div class="text-truncate" data-i18n="List">Assign Subject</div>
+            <div class="text-truncate" data-i18n="List">Class List</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="#" class="menu-link">
-            <div class="text-truncate" data-i18n="List">Subjects</div>
+            <div class="text-truncate" data-i18n="List">Add New Class</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="#" class="menu-link">
-            <div class="text-truncate" data-i18n="List">Class</div>
+            <div class="text-truncate" data-i18n="List">Class Subject List</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="#" class="menu-link">
-            <div class="text-truncate" data-i18n="List">Session</div>
+            <div class="text-truncate" data-i18n="List">Add New Class Subject</div>
           </a>
         </li>
          <li class="menu-item">
           <a href="#" class="menu-link">
             <div class="text-truncate" data-i18n="List">Promote Students</div>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- -----------------------------------Subject------------------------------------------------- -->
+    <li class="menu-item">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-book"></i>
+        <div class="text-truncate" data-i18n="Users">Subject</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item">
+          <a href="#" class="menu-link">
+            <div class="text-truncate" data-i18n="List">Subject List</div>
+          </a>
+        </li>
+         <li class="menu-item">
+          <a href="#" class="menu-link">
+            <div class="text-truncate" data-i18n="List">Add New Subject</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link">
+            <div class="text-truncate" data-i18n="List">Assigned Subject List</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link">
+            <div class="text-truncate" data-i18n="List">Assign New Subject</div>
           </a>
         </li>
       </ul>
