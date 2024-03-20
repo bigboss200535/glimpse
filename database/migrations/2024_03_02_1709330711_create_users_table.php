@@ -25,8 +25,8 @@ class CreateUsersTable extends Migration
 			$table->string('Role',100);
 			$table->string('Permission',100);
 			$table->string('Image',150);
-			$table->string('Country',20);
-			$table->string('Religion',20);
+			// $table->string('Country',20);
+			// $table->string('Religion',20);
 			$table->string('AddedId',20);
 			$table->datetime('AddedDate')->useCurrent();
 			$table->datetime('UpdatedDate');

@@ -1,11 +1,13 @@
   <title>{{ config('app.name') }} | Anywhere, Everywhere</title>
  @include('inc.header')
+<link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css" />
+  
+<script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
 <body>
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DDHKGP" height="0" width="0" style="display: none; visibility: hidden"></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <!-- Layout wrapper -->
+    <noscript>
+       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DDHKGP" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+  
 <div class="layout-wrapper layout-content-navbar  ">
   <div class="layout-container">
     <!-- Menu -->
@@ -27,29 +29,63 @@
                   <div class="card">
                     <h5 class="card-header">List of Students</h5>
                     <div class="card-datatable table-responsive">
-                      <table class="dt-fixedheader table border-top" id="">
+                      <table class="table table-striped table-bordered" id="student_list">
                         <thead>
                           <tr>
-                            <th></th>
-                            <th></th>
-                            <th>id</th>
+                            <th>Reg No</th>
                             <th>Name</th>
-                            <th>Email</th>
-                            <th>Date</th>
-                            <th>Salary</th>
+                            <th>Gender</th>
+                            <th>Birth Date</th>
+                            <th>Address</th>
+                            <th>Joined Date</th>
                             <th>Status</th>
                             <th>Action</th>
                           </tr>
                         </thead>
+                        <tbody class="table-border-bottom-0">
+                          @foreach($students as $student_list)
+                          <tr> 
+                            <td>{{ $student_list->StudentId }}</td>
+                            <td>
+                              <span class="fw-medium">{{ $student_list->Fullname }}</span>
+                            </td>
+                            <td>{{ strtoupper($student_list->Gender) }}</td>
+                            <td>{{ \Carbon\Carbon::parse($student_list->DOB)->format('d-m-Y') }}</td>
+                            <td>{{ strtoupper($student_list->Address) }}</td>
+                            <td>{{ \Carbon\Carbon::parse($student_list->DateJoined)->format('d-m-Y') }}</td>
+                            <td>
+                                @if ($student_list->Status === 'ACTIVE')
+                                <span class="badge bg-label-info me-1">Active</span>
+                                  @else
+                                  <span class="badge bg-label-danger me-1">Inactive</span>
+                                @endif
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                        </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit
+                                                </a>
+                                                <a class="dropdown-item" href="javascript:void(0);">
+                                                    <i class="bx bx-trash me-1"></i> Delete
+                                                  </a>
+                                           </div>
+                                </div>
+                            </td>
+                          </tr>
+                          @endforeach
+                        </tbody>
                         <tfoot>
                           <tr>
-                            <th></th>
+                            <!-- <th></th> -->
                             <th></th>
                             <th>id</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Date</th>
-                            <th>Salary</th>
+                            <th>Adress</th>
                             <th>Status</th>
                             <th>Action</th>
                           </tr>
@@ -67,7 +103,7 @@
     </div>
   </div>
     <!-- Overlay -->
-    <div class="layout-overlay layout-menu-toggle"></div>
+<div class="layout-overlay layout-menu-toggle"></div>
     <!-- Drag Target Area To SlideIn Menu On Small Screens -->
 <div class="drag-target"></div>
 </div>
@@ -92,3 +128,11 @@
 </body>
 </html>-->
  @include('inc.script')
+ <script type="text/javascript">
+     $(document).ready( function () {
+    $('#student_list').DataTable();
+} );
+   // new DataTable('#student_list');
+   // let table = new DataTable('#student_list');
+ </script>
+

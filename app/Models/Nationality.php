@@ -5,34 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Student extends Model
+class Nationality extends Model
 {
      use HasFactory;
    
-     protected $table = 'students';
-     protected $primaryKey = 'StudentId';
+     protected $table = 'nationality';
+     protected $primaryKey = 'NationalityId ';
      public $timestamps = false;
 
-     public function user(){
+      public function user(){
        return $this->belongsTo('App\Models\Users', 'UserId');
      }
-
+    
      protected $fillable = [
-        'StudentId',
-        'Firstname',
-        'Lastname',
-        'Gender',
         'NationalityId',
-        'Address',
-        'DOB',
-        'ReligionId',
-        'RegionId',
-        'DateJoined',
-        'DenominationId',
-        'Transaction',
-        'SectionId',
-        'PrevSchool',
-        'Image',
+        'Nationality',
         'AddedId',
         'UserId',
         'AddedDate',

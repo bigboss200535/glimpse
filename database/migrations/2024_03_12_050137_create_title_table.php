@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('ArchiveId',10);
             $table->datetime('ArchiveDate');
             $table->datetime('ArchiveTime');
-            $table->primary('PeriodId');
+            $table->primary('TitleId');
             $table->foreign('UserId')->references('UserId')->on('users');
         });
     }

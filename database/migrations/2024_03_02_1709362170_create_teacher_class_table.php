@@ -26,6 +26,7 @@ class CreateTeacherClassTable extends Migration
 			$table->datetime('ArchiveTime');
 			$table->primary('TeacherClassId');
 			$table->foreign('UserId')->references('UserId')->on('users');
+			$table->foreign('TeacherId')->references('UserId')->on('users');
         });
     }
 

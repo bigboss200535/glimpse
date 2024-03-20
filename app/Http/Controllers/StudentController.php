@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Student; 
+use App\Models\Nationality; 
 use Illuminate\Support\Facades\Session;
 use DataTables;
 use Illuminate\Support\Facades\Hash;
@@ -14,15 +15,26 @@ class StudentController extends Controller
     public function index()
     {
         // fetch all student which are active and not soft deleted
-        $payers = Student::rightJoin('users', 'users.UserId', '=', 'students.UserId')
+        $students = Student::rightJoin('users', 'users.UserId', '=', 'students.UserId')
         ->where('students.Archived', 'NO')
-        ->select('students.*', 'students.StudentId AS StudentIdNo', 'users.UserId as UserId', 'users.Fullname')
+        ->select('students.*', 'students.StudentId AS StudentIdNo', 'users.UserId as UserId', 'users.Fullname as Username')
         ->orderBy('students.AddedDate', 'desc')
-         // ->limit(20)
         ->get();
-
-        return view('payer.index', compact('payers'));
+        
+        return view('student.list', compact('students'));
     } 
+
+
+     public function create()
+    {
+       //display registration form with NATIONALITY and REGion 
+         $national_id = DB::table('nationality')->get();
+         $student_region = DB::table('region')->get();
+
+         return view('student.add', compact('national_id', 'student_region'));
+    }
+
+
     public function store(Request $request)
     {
         $validatedData = $request->validate([

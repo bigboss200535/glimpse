@@ -2,7 +2,14 @@
 
 namespace App\Http\Controllers;
 
+// use Illuminate\Http\Request;
+ 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Session;
+use App\Models\User;
+use Hash;
 
 class UserController extends Controller
 {
@@ -35,7 +42,7 @@ class UserController extends Controller
         }
         return redirect("login")->withSuccess('Please enter valid credentials');
     }
-    
+
     // code login method
     public function index()
     {

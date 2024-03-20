@@ -336,13 +336,13 @@
     <li class="menu-item">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-collection"></i>
-        <div class="text-truncate" data-i18n="Cards">Library</div>
+        <div class="text-truncate" data-i18n="Cards">Fee</div>
         <span class="badge badge-center rounded-pill bg-danger ms-auto">6</span>
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
-          <a href="cards-basic.html" class="menu-link">
-            <div class="text-truncate" data-i18n="Basic">Accounts</div>
+          <a href="/fee" class="menu-link">
+            <div class="text-truncate" data-i18n="Basic">Add Fees</div>
           </a>
         </li>
         <li class="menu-item">
