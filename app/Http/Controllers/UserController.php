@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 // use Illuminate\Http\Request;
- 
+
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,7 +14,16 @@ use Hash;
 
 class UserController extends Controller
 {
-    
+
+    public function index()
+    {
+        // fetch all student which are active and not soft deleted
+       $users = DB::table('users')->get();
+        
+        return view('user.list', compact('users'));
+    } 
+
+
     // code logout method
     public function logout()
     {
@@ -44,8 +54,8 @@ class UserController extends Controller
     }
 
     // code login method
-    public function index()
-    {
-        return view('auth.login');
-    }
+    // public function index()
+    // {
+    //     return view('auth.login');
+    // }
 }

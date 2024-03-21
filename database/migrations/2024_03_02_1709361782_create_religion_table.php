@@ -10,16 +10,16 @@ class CreateReligionTable extends Migration
     {
         Schema::create('religion', function (Blueprint $table) {
 			$table->string('ReligionId',100);
-            $table->string('Religion',50);
+            $table->string('Religion',150);
             $table->string('AddedId',100);
-            $table->string('UserId',100);
+            $table->string('UserId',50);
             $table->datetime('AddedDate')->useCurrent();
             $table->datetime('UpdatedDate');
             $table->string('UpdatedId',100);
             $table->text('UpdatedNotes');
             $table->string('Status',10)->default('ACTIVE');
             $table->string('Archived',10)->default('NO');
-            $table->string('ArchiveId',100);
+            $table->string('ArchiveId',50);
             $table->datetime('ArchiveDate');
             $table->datetime('ArchiveTime');
             $table->primary('ReligionId');

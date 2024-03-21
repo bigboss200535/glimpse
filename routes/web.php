@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ClassController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Session;
 
 /*
@@ -49,6 +50,7 @@ Route::get('/addstaff', function () {
     return view('user/add');
 });
 
+
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/user/{UserId}', [UserController::class, 'show']);
@@ -60,6 +62,7 @@ Route::get('/user/{UserId}', [UserController::class, 'show']);
 
 //LAUNCHES THE LIST FORM FOR RECORDS FROM THE DATABASE
 Route::get('/students', [StudentController::class, 'index']);
+Route::get('/users', [UserController::class, 'index']);
 Route::get('/class', [ClassController::class, 'index']);
 
 
@@ -67,4 +70,4 @@ Route::get('/class', [ClassController::class, 'index']);
 Route::get('/addstudent', [StudentController::class, 'create']);
 Route::get('/addclass', [ClassController::class, 'create']);
 
-Route::post('studentstore', [StudentController::class, 'store'])->name('payer.store');
+Route::post('studentstore', [StudentController::class, 'store'])->name('student.store');

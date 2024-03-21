@@ -11,8 +11,8 @@ class CreateNationalityTable extends Migration
         Schema::create('nationality', function (Blueprint $table) {
 			$table->string('NationalityId',50);
 			$table->string('Nationality',100);
-			$table->string('AddedId',100);
-			$table->string('UserId',20);
+			$table->string('AddedId',50);
+			$table->string('UserId',50);
 			$table->datetime('AddedDate')->useCurrent();
 			$table->datetime('UpdatedDate');
 			$table->string('UpdatedId',100);

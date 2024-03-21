@@ -79,7 +79,11 @@
             <div class="text-truncate" data-i18n="List">Student Admission</div>
           </a>
         </li>
-       
+       <li class="menu-item">
+          <a href="#" class="menu-link">
+            <div class="text-truncate" data-i18n="List">Promote Students</div>
+          </a>
+        </li>
         <li class="menu-item">
           <a href="#" class="menu-link">
             <div class="text-truncate" data-i18n="List">Guardian</div>
@@ -88,7 +92,7 @@
       </ul>
     </li>
 
-<!-- -----------------------------------Student------------------------------------------------- -->
+<!-- -----------------------------------staff------------------------------------------------- -->
     <li class="menu-item">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-chalkboard"></i>
@@ -97,8 +101,8 @@
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
-          <a href="/addstaff" class="menu-link">
-            <div class="text-truncate" data-i18n="List">Add Staff</div>
+          <a href="/users" class="menu-link">
+            <div class="text-truncate" data-i18n="List">List</div>
           </a>
         </li>
         <li class="menu-item">
@@ -106,21 +110,17 @@
             <div class="text-truncate" data-i18n="List">Attendance</div>
           </a>
         </li>
-        <li class="menu-item">
-          <a href="#" class="menu-link">
-            <div class="text-truncate" data-i18n="List">Promote Students</div>
-          </a>
-        </li>
+        
         <li class="menu-item">
           <a href="#" class="menu-link">
             <div class="text-truncate" data-i18n="List">Leave</div>
           </a>
         </li>
-        <li class="menu-item">
+        <!-- <li class="menu-item">
           <a href="#" class="menu-link">
             <div class="text-truncate" data-i18n="List">Guardian</div>
           </a>
-        </li>
+        </li> -->
       </ul>
     </li>
     <!-- -----------------------------------Academics------------------------------------------------- -->

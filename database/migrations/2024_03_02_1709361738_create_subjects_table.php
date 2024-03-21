@@ -13,15 +13,15 @@ class CreateSubjectsTable extends Migration
 			$table->string('SubjectName',50);
 			$table->string('SubjectAbb',20);
 			// $table->string('Periods',15);
-			$table->string('AddedId',20);
-			$table->string('UserId',20);
+			$table->string('AddedId',100);
+			$table->string('UserId',100);
 			$table->datetime('AddedDate')->useCurrent();
 			$table->datetime('UpdatedDate');
 			$table->string('UpdatedId',60);
 			$table->text('UpdatedNotes');
 			$table->string('Status',10)->default('ACTIVE');
 			$table->string('Archived',10)->default('NO');
-			$table->string('ArchiveId',10);
+			$table->string('ArchiveId',100);
 			$table->datetime('ArchiveDate');
 			$table->datetime('ArchiveTime');
 			$table->primary('SubjectId');

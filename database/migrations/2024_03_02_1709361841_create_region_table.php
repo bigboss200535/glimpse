@@ -10,8 +10,8 @@ class CreateRegionTable extends Migration
     {
         Schema::create('region', function (Blueprint $table) {
 			$table->string('RegionId',50);
-			$table->string('Region',20);
-			$table->string('AddedId',20);
+			$table->string('Region',150);
+			$table->string('AddedId',50);
 			$table->string('UserId',50);
 			$table->datetime('AddedDate')->useCurrent();
 			$table->datetime('UpdatedDate');

@@ -14,16 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('title', function (Blueprint $table) {
-            $table->string('TitleId',20);
+            $table->string('TitleId',50);
             $table->string('Title',50);
-            $table->string('UserId',20);
+            $table->string('UserId',50);
             $table->datetime('AddedDate')->useCurrent();
             $table->datetime('UpdatedDate');
             $table->string('UpdatedId',60);
             $table->text('UpdatedNotes');
             $table->string('Status',10)->default('ACTIVE');
             $table->string('Archived',10)->default('NO');
-            $table->string('ArchiveId',10);
+            $table->string('ArchiveId',50);
             $table->datetime('ArchiveDate');
             $table->datetime('ArchiveTime');
             $table->primary('TitleId');

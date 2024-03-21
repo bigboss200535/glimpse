@@ -16,7 +16,6 @@
           <div class="content-wrapper">
             <!-- Content -->
               @include ('inc.preloader')
-           
                <div class="container-xxl flex-grow-1 container-p-y">
                 <div class="row">
                   <div class="col">
@@ -36,11 +35,11 @@
                       <div class="tab-content">
                         <!-- Personal Info -->
                         <div class="tab-pane fade active show" id="form-tabs-personal" role="tabpanel">
-                          <form method="post" id="student_form_submission" action="{{ url('studentsave') }}">
+                          <form method="post" id="student_form_submission" action="{{ url('studentstore') }}">
                               @csrf
                             <div class="row">
                              
-<!--                               <table class="table-border-bottom-0 table">
+                             <!--  <table class="table-border-bottom-0 table">
                                 <tr>
                                   <td>
                                     <div class="col-md-12" align="center">
@@ -57,28 +56,24 @@
                                 <label class="col-form-label" for="basic-icon-default-fullname">First Name <label class="text-danger" style="font-size: 15px;">*</label></label>
                                   <div class="input-group input-group-merge">
                                     <span id="basic-icon-default-fullname2" class="input-group-text"
-                                      ><i class="bx bx-user"></i
-                                    ></span>
+                                      ><i class="bx bx-user"></i></span>
                                     <!-- <input type="text" id="multicol-first-name" class="form-control" placeholder="John" /> -->
                                     <input type="text" class="form-control" placeholder="First name" name="firstname" id="firstname" />
                                   </div>
                               </div>
-
                               <div class="col-md-4 col-sm-4 p-1">
                                 <label class="col-form-label" for="basic-icon-default-fullname">Last Name <label class="text-danger" style="font-size: 15px;">*</label></label>
                                   <div class="input-group input-group-merge">
                                     <span id="basic-icon-default-fullname2" class="input-group-text"
-                                      ><i class="bx bx-user"></i
-                                    ></span>
-                                    <input type="text" class="form-control"  name="lastname" id="lastname" placeholder="Last name" aria-label="Last name" aria-describedby="basic-icon-default-fullname2" />
+                                      ><i class="bx bx-user"></i></span>
+                                    <input type="text" class="form-control"  name="lastname" id="lastname" placeholder="Last name" aria-label="Last name" aria-describedby="basic-icon-default-fullname2"/>
                                   </div>
                               </div>
                                <div class="col-md-4 col-sm-4 p-1">
                                   <label class="col-form-label" for="basic-icon-default-fullname">Gender <label class="text-danger" style="font-size: 15px;">*</label></label>
                                     <div class="input-group input-group-merge">
                                       <span id="basic-icon-default-fullname2" class="input-group-text"
-                                        ><i class="bx bx-user"></i
-                                      ></span>
+                                        ><i class="bx bx-user"></i></span>
                                       <select class="form-select" name="gender" id="gender">
                                         <option disabled selected>-select-</option>
                                         <option value="FEMALE">FEMALE</option>
@@ -89,10 +84,7 @@
                                <div class="col-md-4 col-sm-4 p-1">
                                 <label class="col-form-label" for="basic-icon-default-fullname">Nationality <label class="text-danger" style="font-size: 15px;">*</label></label>
                                   <div class="input-group input-group-merge">
-                                    <span id="basic-icon-default-fullname2" class="input-group-text"
-                                      ><i class="bx bx-globe"></i
-                                    ></span>
-
+                                    <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-globe"></i></span>
                                     <select class="form-select" name="nationality" id="nationality">
                                       <option value="" disabled selected>-select-</option>
                                        @foreach($national_id as $nation)
@@ -109,13 +101,10 @@
                                       <input type="date" class="form-control" name="birth_date" id="birth_date" placeholder="Address" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" />
                                     </div>
                                 </div>
-
                                <div class="col-md-4 col-sm-4 p-1">
                                   <label class="col-form-label" for="basic-icon-default-fullname">Religion <label class="text-danger" style="font-size: 15px;">*</label></label>
                                     <div class="input-group input-group-merge">
-                                      <span id="basic-icon-default-fullname2" class="input-group-text"
-                                        ><i class="bx bx-table"></i
-                                      ></span>
+                                      <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-table"></i></span>
                                       <select class="form-select" name="religion" id="religion">
                                         <option value="" disabled selected>-select-</option>
                                         @foreach($student_religion as $religion)
@@ -129,7 +118,7 @@
                                     <div class="input-group input-group-merge">
                                       <span id="basic-icon-default-fullname2" class="input-group-text"
                                         ><i class="bx bx-book"></i></span>
-                                      <input type="text" class="form-control" id="address" name="address" placeholder="Address" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" />
+                                      <input type="text" class="form-control" id="address" name="address" placeholder="Address" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2"/>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4 p-1">
@@ -146,7 +135,6 @@
                                     </select>
                                   </div>
                               </div>
-
                                 <div class="col-md-4 col-sm-4 p-1">
                                 <label class="col-form-label" for="basic-icon-default-fullname">Class <label class="text-danger" style="font-size: 15px;">*</label></label>
                                   <div class="input-group input-group-merge">
@@ -168,12 +156,10 @@
                                   <span id="basic-icon-default-fullname2" class="input-group-text"
                                     ><i class="bx bx-book"></i
                                   ></span>
-                                  <input type="file" class="form-control" id="basic-icon-default-fullname"  />
+                                  <input type="file" class="form-control" id="basic-icon-default-fullname"/>
                                 </div>
                             </div>
-
                               <input type="text" class="form-control" id="user_id" name="user_id" placeholder="Address" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" hidden value="2" />
-                                    
                              <div class="row mt-4">
                               <div class="col-md-6">
                                 <div class="row justify-content-end">
