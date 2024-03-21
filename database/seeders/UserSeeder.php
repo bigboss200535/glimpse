@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        for ($i = 0; $i < 300; $i++) {
+        for ($i = 0; $i < 500; $i++) {
             // $truncatedUserId = substr($userId, 0, 20);
             DB::table('users')->insert([
                 'UserId' => $faker->uuid,

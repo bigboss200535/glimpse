@@ -17,6 +17,10 @@ class Student extends Model
        return $this->belongsTo('App\Models\Users', 'UserId');
      }
 
+     // public function user(){
+     //   return $this->belongsTo('App\Models\Users', 'UserId');
+     // }
+
      protected $fillable = [
         'StudentId',
         'Firstname',
