@@ -28,4 +28,62 @@
               }, 3000); 
               // 3000 milliseconds = 3 seconds
             });
+
+
+
+    $(document).ready(function() {
+    $('#student_form_submission').submit(function(e) {
+        e.preventDefault(); // Prevent the form from submitting normally
+        
+        // Validate all fields are not empty
+        var isValid = true;
+        $(this).find('input[type="text"], select, textarea').each(function() {
+            if ($(this).val() === '') {
+                isValid = false;
+                return false; // Exit loop early if any field is empty
+            }
+        });
+        
+        if (!isValid) {
+            // Display error message if any field is empty
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: 'Please fill out all fields.',
+            });
+            return;
+        }
+
+        var formData = new FormData(this);
+
+        $.ajax({
+            url: $(this).attr('action'),
+            type: $(this).attr('method'),
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                // Handle success response
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: response.success,
+                }).then((result) => {
+                    // Redirect or perform any action after success
+                    window.location.href = '/success-page';
+                });
+            },
+            error: function(xhr, status, error) {
+                // Handle error response
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: xhr.responseText,
+                });
+            }
+        });
+    });
+});
+
+
 </script>
