@@ -83,8 +83,6 @@
                                         <option disabled selected>-select-</option>
                                         <option value="FEMALE">FEMALE</option>
                                         <option value="MALE">MALE</option>
-
-                                        
                                       </select>
                                     </div>
                                 </div>
@@ -123,10 +121,6 @@
                                         @foreach($student_religion as $religion)
                                           <option value="{{ strtoupper($religion->ReligionId) }}">{{ strtoupper($religion->Religion) }}</option>
                                         @endforeach
-                                       <!--  <option value="CHRISTIANITY">CHRISTIANITY</option>
-                                        <option value="MUSLIM">MUSLIM</option>
-                                        <option value="TRADITIONAL">TRADITIONAL</option>
-                                        <option value="OTHERS">OTHERS</option> -->
                                       </select>
                                     </div>
                                 </div>
@@ -149,22 +143,21 @@
                                       @foreach($student_region as $region)
                                           <option value="{{ strtoupper($region->RegionId) }}">{{ strtoupper($region->Region) }}</option>
                                         @endforeach
-                                      <!-- <option value="AHAFO">AHAFO</option>
-                                      <option value="ASHANTI">ASHANTI</option> 
-                                      <option value="BONO EAST">BONO EAST</option>
-                                      <option value="BRONG AHAFO">BRONG AHAFO</option>
-                                      <option value="CENTRAL">CENTRAL</option>
-                                      <option value="EASTERN">EASTERN</option>
-                                      <option value="GREATER ACCRA">GREATER ACCRA</option>
-                                      <option value="WESTERN NORTH">WESTERN NORTH</option>
-                                      <option value="NORTHERN">NORTHERN</option>
-                                      <option value="NORTH EAST">NORTH EAST</option>
-                                      <option value="OTI">OTI</option>
-                                      <option value="UPPER EAST">UPPER EAST</option>
-                                      <option value="UPPER WEST">UPPER WEST</option>
-                                      <option value="VOLTA">VOLTA</option>
-                                      <option value="WESTERN">WESTERN</option>
-                                      <option value="SAVANNAH">SAVANNAH</option> -->
+                                    </select>
+                                  </div>
+                              </div>
+
+                                <div class="col-md-4 col-sm-4 p-1">
+                                <label class="col-form-label" for="basic-icon-default-fullname">Class <label class="text-danger" style="font-size: 15px;">*</label></label>
+                                  <div class="input-group input-group-merge">
+                                    <span id="basic-icon-default-fullname2" class="input-group-text">
+                                      <i class="bx bx-table"></i>
+                                    </span>
+                                    <select class="form-select" name="classname" id="classname">
+                                      <option disabled selected>-select-</option>
+                                      @foreach($student_region as $region)
+                                          <option value="{{ strtoupper($region->RegionId) }}">{{ strtoupper($region->Region) }}</option>
+                                        @endforeach
                                     </select>
                                   </div>
                               </div>
@@ -175,7 +168,7 @@
                                   <span id="basic-icon-default-fullname2" class="input-group-text"
                                     ><i class="bx bx-book"></i
                                   ></span>
-                                  <input type="text" class="form-control" id="basic-icon-default-fullname"  />
+                                  <input type="file" class="form-control" id="basic-icon-default-fullname"  />
                                 </div>
                             </div>
 

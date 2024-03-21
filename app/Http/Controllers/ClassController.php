@@ -3,25 +3,23 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-use App\Models\Student; 
-use App\Models\Nationality; 
+use App\Models\Classes; 
+// use App\Models\Nationality; 
 use Illuminate\Support\Facades\Session;
 use DataTables;
 use Illuminate\Support\Facades\Hash;
 
-class StudentController extends Controller
+class ClassController extends Controller
 {
 
     public function index()
     {
         // fetch all student which are active and not soft deleted
-        $students = Student::rightJoin('users', 'users.UserId', '=', 'students.UserId')
-                ->where('students.Archived', 'NO')
-                ->select('students.*', 'students.StudentId AS StudentIdNo', 'users.UserId as UserId', 'users.Fullname as Username')
-                ->orderBy('students.AddedDate', 'desc')
+        $classes = Classes::select('class.*')
+                ->orderBy('class.AddedDate', 'desc')
                 ->get();
         
-        return view('student.list', compact('students'));
+        return view('class.list', compact('classes'));
     } 
 
 
@@ -32,37 +30,23 @@ class StudentController extends Controller
          $student_region = DB::table('region')->get();
          $student_religion = DB::table('religion')->get();
 
-         return view('student.add', compact('national_id', 'student_region', 'student_religion'));
+         return view('class.add', compact('national_id', 'student_region', 'student_religion'));
     }
 
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'firstname' => 'required|min:3|max:50',
-            'lastname' => 'required|min:3|max:50',
-            'gender' => 'nullable |min:1',
-            'national_id' => 'nullable|min:3|max:50',
-            'address' => 'nullable|min:3|max:150',
-            'dob' => 'nullable',
-            // 'portfolio_id' => 'nullable|min:3|max:50',
-            'religion_id' => 'nullable|min:3|max:50',
-            'region_id' => 'nullable|min:3|max:50',
-            'date_joined' => 'nullable|min:3|max:50',
-            'denomination_id' => 'nullable|min:3|max:50',
-            'section_id' => 'nullable|min:3|max:50',
-            'prev_school' => 'nullable|min:3|max:50',
-            'image' => 'nullable',
+            'classname' => 'required|min:3|max:50',
+            'numberofsubjects' => 'required|min:3|max:50',
             'added_id' => 'nullable',
             'user_id' => 'nullable',
         ]);
 
-        $existingPayer = Student::where('Firstname', $request->input('firstname'))
-                          ->where('Lastname', strtoupper($request->input('lastname')))
-                          ->where('DOB', strtoupper($request->input('dob')))
+        $existingPayer = Classes::where('ClassName', $request->input('classname'))
                           ->first();
 
         if ($existingPayer) {
-            return redirect()->back()->withErrors(['error' => 'Student with the same details already exists.']);
+            return redirect()->back()->withErrors(['error' => 'Class with the same details already exists.']);
         }
         // Retrieve the count of existing taxpayers
         $count_payers = Student::count();
