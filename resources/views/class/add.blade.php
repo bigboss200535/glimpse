@@ -20,9 +20,7 @@
                <div class="container-xxl flex-grow-1 container-p-y">
                 <div class="row">
                   <div class="col">
-                    <h6 class="mt-4"> Add New Class </h6>
-                    <!-- <div class="nav-align-top mb-3"> -->
-                      
+                    <h6 class="mt-4"> Add New Class </h6>                      
                       <div class="">
                         <form method="post" id="class_form_submission" action="{{url('classsave')}}">
                             <div class="card">
@@ -35,8 +33,7 @@
                                     <span id="basic-icon-default-fullname2" class="input-group-text"
                                       ><i class="bx bx-user"></i
                                     ></span>
-                                    <!-- <input type="text" id="multicol-first-name" class="form-control" placeholder="John" /> -->
-                                    <input type="text" class="form-control" placeholder="First name" name="firstname" id="firstname" />
+                                    <input type="text" class="form-control" placeholder="Class name" name="classname" id="classname" />
                                   </div>
                               </div>
 
@@ -47,24 +44,25 @@
                                       ><i class="bx bx-user"></i
                                     ></span>
                                     <!-- <input type="text" id="multicol-first-name" class="form-control" placeholder="John" /> -->
-                                    <input type="number" class="form-control" placeholder="First name" name="firstname" id="firstname" />
+                                    <input type="number" class="form-control" placeholder="Number of Subjects taught" name="numberofsubjects" id="numberofsubjects" />
                                   </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                         <div class="row">                     
-                             <div class="row mt-4">
-                              <div class="col-md-6">
-                                <div class="row justify-content-end">
+                            <div class="col-md-6 mt-4">
+                                <div>
                                   <div class="col-sm-9">
                                     <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
                                     <button type="reset" class="btn btn-label-secondary">Cancel</button>
                                   </div>
                                 </div>
                               </div>
-                            </div>
                           </div>
+                          <!-- <div class="row">                      -->
+                             <!-- <div class="row "> -->
+                              
+                            <!-- </div> -->
+                          <!-- </div> -->
+                        </div>
                         </form>
                       </div>
                     </div>
