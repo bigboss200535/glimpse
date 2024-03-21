@@ -26,7 +26,7 @@ class CreateStudentsTable extends Migration
 				$table->string('PreviousSchool',100)->default('N/A');
 				$table->string('PreviousClass',100)->default('N/A');
 				$table->string('Image',250);
-				$table->string('AddedId',20);
+				$table->string('AddedId',50);
 				$table->string('UserId',50);
 				$table->datetime('AddedDate')->useCurrent();
 				$table->datetime('UpdatedDate');
