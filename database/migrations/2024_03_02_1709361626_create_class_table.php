@@ -9,11 +9,11 @@ class CreateClassTable extends Migration
     public function up()
     {
         Schema::create('class', function (Blueprint $table) {
-			$table->string('ClassId',20);
+			$table->string('ClassId',50);
 			$table->string('ClassName',20);
 			$table->string('NumberOfSubjects',20);
 			$table->string('ClassAbbreviation',20);
-			$table->string('UserId',20);
+			$table->string('UserId',100);
 			$table->datetime('AddedDate')->useCurrent();
 			$table->datetime('UpdatedDate');
 			$table->string('UpdatedId',60);

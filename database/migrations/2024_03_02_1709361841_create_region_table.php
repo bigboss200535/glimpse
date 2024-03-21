@@ -9,17 +9,17 @@ class CreateRegionTable extends Migration
     public function up()
     {
         Schema::create('region', function (Blueprint $table) {
-			$table->string('RegionId',20);
+			$table->string('RegionId',50);
 			$table->string('Region',20);
 			$table->string('AddedId',20);
-			$table->string('UserId',20);
+			$table->string('UserId',50);
 			$table->datetime('AddedDate')->useCurrent();
 			$table->datetime('UpdatedDate');
 			$table->string('UpdatedId',60);
 			$table->text('UpdatedNotes');
 			$table->string('Status',10)->default('ACTIVE');
 			$table->string('Archived',10)->default('NO');
-			$table->string('ArchiveId',10);
+			$table->string('ArchiveId',50);
 			$table->datetime('ArchiveDate');
 			$table->datetime('ArchiveTime');
 			$table->primary('RegionId');
