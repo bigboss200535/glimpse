@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
-use App\Http\Controllers\ClassController;
+use App\Http\Controllers\ClassesController;
 use Illuminate\Support\Facades\Session;
 
 /*
@@ -60,11 +60,11 @@ Route::get('/user/{UserId}', [UserController::class, 'show']);
 
 //LAUNCHES THE LIST FORM FOR RECORDS FROM THE DATABASE
 Route::get('/students', [StudentController::class, 'index']);
-Route::get('/class', [ClassController::class, 'index']);
+Route::get('/class', [ClassesController::class, 'index']);
 
 
 //LAUNCHES THE ADD FORMS
 Route::get('/addstudent', [StudentController::class, 'create']);
-Route::get('/addclass', [ClassController::class, 'create']);
+Route::get('/addclass', [ClassesController::class, 'create']);
 
 Route::post('studentstore', [StudentController::class, 'store'])->name('payer.store');
