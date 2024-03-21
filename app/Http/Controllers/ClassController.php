@@ -49,7 +49,7 @@ class ClassController extends Controller
             return redirect()->back()->withErrors(['error' => 'Class with the same details already exists.']);
         }
         // Retrieve the count of existing taxpayers
-        $count_payers = Student::count();
+        $count_payers = Classes::count();
         // Extract the initials from the surname and firstname
         $surname_initial = strtoupper(substr($request->input('firstname'), 0, 1));
         $firstname_initial = strtoupper(substr($request->input('lastname'), 0, 1));
