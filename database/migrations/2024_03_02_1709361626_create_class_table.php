@@ -13,7 +13,7 @@ class CreateClassTable extends Migration
 			$table->string('ClassName',20);
 			$table->string('NumberOfSubjects',20);
 			$table->string('ClassAbbreviation',20);
-			$table->string('UserId',100);
+			$table->string('UserId',50);
 			// $table->string('ClassAbbreviation',20);
 			// $table->string('UserId',20);
 			$table->datetime('AddedDate')->useCurrent();
@@ -22,7 +22,7 @@ class CreateClassTable extends Migration
 			$table->text('UpdatedNotes');
 			$table->string('Status',20)->default('ACTIVE');
 			$table->string('Archived',20)->default('NO');
-			$table->string('ArchiveId',20);
+			$table->string('ArchiveId',50);
 			$table->datetime('ArchiveDate');
 			$table->datetime('ArchiveTime');
 			$table->primary('ClassId');

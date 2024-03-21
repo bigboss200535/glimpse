@@ -15,10 +15,10 @@ class ClassController extends Controller
     public function index()
     {
         // fetch all student which are active and not soft deleted
-        $classes = Classes::select('class.*')
-                ->orderBy('class.AddedDate', 'desc')
-                ->get();
-        
+        // $classes = Classes::select('class.*')
+        //         ->orderBy('class.AddedDate', 'desc')
+        //         ->get();
+        $classes = DB::table('class')->get();
         return view('class.list', compact('classes'));
     } 
 

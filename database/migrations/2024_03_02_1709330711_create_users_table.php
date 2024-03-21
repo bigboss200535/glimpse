@@ -12,7 +12,7 @@ class CreateUsersTable extends Migration
 			$table->string('UserId',50);
 			$table->string('Username',50);
 			$table->string('Password',100);
-			$table->string('TitleId',50);
+			$table->string('Title',50);
 			$table->string('Firstname',50);
 			$table->string('Lastname',50);
 			$table->string('Fullname',200)->virtualAs("CONCAT(Title, '. ', Lastname, ' ', Firstname)");
