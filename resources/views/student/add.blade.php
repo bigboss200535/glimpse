@@ -146,6 +146,21 @@
                                     </select>
                                   </div>
                               </div>
+
+                                <div class="col-md-4 col-sm-4 p-1">
+                                <label class="col-form-label" for="basic-icon-default-fullname">Class <label class="text-danger" style="font-size: 15px;">*</label></label>
+                                  <div class="input-group input-group-merge">
+                                    <span id="basic-icon-default-fullname2" class="input-group-text">
+                                      <i class="bx bx-table"></i>
+                                    </span>
+                                    <select class="form-select" name="classname" id="classname">
+                                      <option disabled selected>-select-</option>
+                                      @foreach($student_region as $region)
+                                          <option value="{{ strtoupper($region->RegionId) }}">{{ strtoupper($region->Region) }}</option>
+                                        @endforeach
+                                    </select>
+                                  </div>
+                              </div>
                                 
                              <div class="col-md-4 col-sm-4 p-1">
                               <label class="col-form-label" for="basic-icon-default-fullname">Student's Image <label class="text-danger" style="font-size: 15px;">*</label></label>
@@ -153,7 +168,7 @@
                                   <span id="basic-icon-default-fullname2" class="input-group-text"
                                     ><i class="bx bx-book"></i
                                   ></span>
-                                  <input type="text" class="form-control" id="basic-icon-default-fullname"  />
+                                  <input type="file" class="form-control" id="basic-icon-default-fullname"  />
                                 </div>
                             </div>
 

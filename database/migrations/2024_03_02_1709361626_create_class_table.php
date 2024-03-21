@@ -12,7 +12,7 @@ class CreateClassTable extends Migration
 			$table->string('ClassId',20);
 			$table->string('ClassName',20);
 			$table->string('NumberOfSubjects',20);
-			$table->string('ClassAbbreviation',20);
+			// $table->string('ClassAbbreviation',20);
 			$table->string('UserId',20);
 			$table->datetime('AddedDate')->useCurrent();
 			$table->datetime('UpdatedDate');

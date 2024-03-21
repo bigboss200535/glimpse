@@ -146,12 +146,12 @@
           </a>
         </li>
         <li class="menu-item">
-          <a href="#" class="menu-link">
+          <a href="/class" class="menu-link">
             <div class="text-truncate" data-i18n="List">Class List</div>
           </a>
         </li>
         <li class="menu-item">
-          <a href="#" class="menu-link">
+          <a href="/addclass" class="menu-link">
             <div class="text-truncate" data-i18n="List">Add New Class</div>
           </a>
         </li>
