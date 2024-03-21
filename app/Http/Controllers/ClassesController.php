@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 use DataTables;
 use Illuminate\Support\Facades\Hash;
 
-class ClassController extends Controller
+class ClassesController extends Controller
 {
 
     public function index()
