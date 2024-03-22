@@ -117,23 +117,7 @@
   @include('inc.update')
     <!-- / Layout wrapper -->
  @include('inc.script')
- <script>
- function makePass(length) {
-            var mydate = new Date();
-            var month = mydate.getMonth()+1;
-            var day = mydate.getDay();
-          var result = 'GRD';
-          var characters = '0123456789ABCDEF';
-          var charactersLength = characters.length;
-          for (var i = 0; i < length; i++ ) {
-            result += characters.charAt(Math.floor(Math.random() * charactersLength));
-            // counter += 1;
-          }
-          var passInput = document.getElementById('passInput');
-          passInput.value = result +<?php echo date('y') ?>+month;
-         }
-         makePass(3);
-</script>
+
 <script type="text/javascript" src="vendors/sweetalert.min.js"></script>
  <?php 
       if(isset($_SESSION['status']))

@@ -66,7 +66,7 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit
+                                                <a class="dropdown-item" href="editstudent&studentid=$student_list->StudentId"><i class="bx bx-edit-alt me-1"></i> Edit
                                                 </a>
                                                 <a class="dropdown-item" href="javascript:void(0);">
                                                     <i class="bx bx-trash me-1"></i> Delete

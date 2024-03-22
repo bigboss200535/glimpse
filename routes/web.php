@@ -68,7 +68,7 @@ Route::get('/user/{UserId}', [UserController::class, 'show']);
 Route::get('/students', [StudentController::class, 'index']);
 
 Route::get('/users', [UserController::class, 'index']);
-Route::get('/class', [ClassController::class, 'index']);
+Route::get('/class', [ClassesController::class, 'index']);
 
 // Route::get('/class', [ClassesController::class, 'index']);
 
@@ -77,4 +77,9 @@ Route::get('/class', [ClassController::class, 'index']);
 Route::get('/addstudent', [StudentController::class, 'create']);
 Route::get('/addclass', [ClassesController::class, 'create']);
 
+//LAUNCHES THE EDIT FORM
+Route::get('/editclass', [ClassesController::class, 'edit']);
+
+
+//SAVES DATA INTO THE DATABASE
 Route::post('studentstore', [StudentController::class, 'store'])->name('student.store');
