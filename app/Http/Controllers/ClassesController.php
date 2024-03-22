@@ -15,15 +15,13 @@ class ClassesController extends Controller
     public function index()
     {
         // fetch all student which are active and not soft deleted
-        // $classes = Classes::select('class.*')
-        //         ->orderBy('class.AddedDate', 'desc')
-        //         ->get();
+      
         $classes = DB::table('class')->get();
         return view('class.list', compact('classes'));
     } 
 
 
-     public function create()
+    public function create()
     {
        //display registration form with NATIONALITY and REGion 
          $national_id = DB::table('nationality')->get();
@@ -31,6 +29,16 @@ class ClassesController extends Controller
          $student_religion = DB::table('religion')->get();
 
          return view('class.add', compact('national_id', 'student_region', 'student_religion'));
+    }
+
+    public function edit()
+    {
+       //display registration form with NATIONALITY and REGion 
+         $national_id = DB::table('nationality')->get();
+         $student_region = DB::table('region')->get();
+         $student_religion = DB::table('religion')->get();
+
+         return view('class.edit', compact('national_id', 'student_region', 'student_religion'));
     }
 
     public function store(Request $request)
