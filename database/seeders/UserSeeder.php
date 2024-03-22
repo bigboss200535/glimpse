@@ -13,13 +13,12 @@ class UserSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        for ($i = 0; $i < 500; $i++) {
+        for ($i = 0; $i < 1000; $i++) {
             // $truncatedUserId = substr($userId, 0, 20);
             DB::table('users')->insert([
                 'UserId' => $faker->uuid,
                 'Username' => $faker->userName,
-                'Password' => bcrypt('password'), 
-                // You might want to replace 'password' with a more secure password generation method
+                'Password' => bcrypt('password'),
                 'Title' => $faker->title,
                 'Firstname' => $faker->firstName,
                 'Lastname' => $faker->lastName,

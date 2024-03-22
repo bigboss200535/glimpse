@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             TitleSeeder::class,
             NationalitySeeder::class,
             ReligionSeeder::class,
-            StudentSeeder::class,
+            // StudentSeeder::class,
         ]);
     }
 }

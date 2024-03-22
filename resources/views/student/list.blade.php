@@ -79,13 +79,12 @@
                         </tbody>
                         <tfoot>
                           <tr>
-                            <!-- <th></th> -->
-                            <th></th>
-                            <th>id</th>
+                            <th>Reg No</th>
                             <th>Name</th>
-                            <th>Email</th>
-                            <th>Date</th>
-                            <th>Adress</th>
+                            <th>Gender</th>
+                            <th>Birth Date</th>
+                            <th>Address</th>
+                            <th>Joined Date</th>
                             <th>Status</th>
                             <th>Action</th>
                           </tr>

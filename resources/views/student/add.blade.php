@@ -44,7 +44,6 @@
                                   <td>
                                     <div class="col-md-12" align="center">
                                 <img src="{{ asset('img/avatars/blank.png')}}" height="150px" alt="Profile_phone">
-                               
                               </div>
                                   </td>
                                   <td align="left"> 
@@ -55,17 +54,16 @@
                               <div class="col-md-4 col-sm-4 p-1">
                                 <label class="col-form-label" for="basic-icon-default-fullname">First Name <label class="text-danger" style="font-size: 15px;">*</label></label>
                                   <div class="input-group input-group-merge">
-                                    <span id="basic-icon-default-fullname2" class="input-group-text"
-                                      ><i class="bx bx-user"></i></span>
-                                    <!-- <input type="text" id="multicol-first-name" class="form-control" placeholder="John" /> -->
+                                    <span id="basic-icon-default-fullname2" class="input-group-text">
+                                      <i class="bx bx-user"></i></span>
                                     <input type="text" class="form-control" placeholder="First name" name="firstname" id="firstname" />
                                   </div>
                               </div>
                               <div class="col-md-4 col-sm-4 p-1">
                                 <label class="col-form-label" for="basic-icon-default-fullname">Last Name <label class="text-danger" style="font-size: 15px;">*</label></label>
                                   <div class="input-group input-group-merge">
-                                    <span id="basic-icon-default-fullname2" class="input-group-text"
-                                      ><i class="bx bx-user"></i></span>
+                                    <span id="basic-icon-default-fullname2" class="input-group-text">
+                                      <i class="bx bx-user"></i></span>
                                     <input type="text" class="form-control"  name="lastname" id="lastname" placeholder="Last name" aria-label="Last name" aria-describedby="basic-icon-default-fullname2"/>
                                   </div>
                               </div>
@@ -88,7 +86,7 @@
                                     <select class="form-select" name="nationality" id="nationality">
                                       <option value="" disabled selected>-select-</option>
                                        @foreach($national_id as $nation)
-                                          <option value="{{ strtoupper($nation->NationalityId) }}">{{ strtoupper($nation->Nationality) }}</option>
+                                          <option value="{{ $nation->NationalityId }}">{{ $nation->Nationality }}</option>
                                         @endforeach
                                     </select>
                                   </div>
@@ -118,7 +116,7 @@
                                     <div class="input-group input-group-merge">
                                       <span id="basic-icon-default-fullname2" class="input-group-text"
                                         ><i class="bx bx-book"></i></span>
-                                      <input type="text" class="form-control" id="address" name="address" placeholder="Address" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2"/>
+                                        <input type="text" class="form-control" id="address" name="address" placeholder="Address" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2"/>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4 p-1">
@@ -135,37 +133,46 @@
                                     </select>
                                   </div>
                               </div>
-                                <div class="col-md-4 col-sm-4 p-1">
-                                <label class="col-form-label" for="basic-icon-default-fullname">Class <label class="text-danger" style="font-size: 15px;">*</label></label>
+                              <div class="col-md-4 col-sm-4 p-1">
+                                <label class="col-form-label" for="basic-icon-default-fullname">Last Known School
+                                 <label class="text-danger" style="font-size: 15px;">*</label>
+                               </label>
                                   <div class="input-group input-group-merge">
                                     <span id="basic-icon-default-fullname2" class="input-group-text">
                                       <i class="bx bx-table"></i>
                                     </span>
-                                    <select class="form-select" name="classname" id="classname">
-                                      <option disabled selected>-select-</option>
-                                      @foreach($student_region as $region)
-                                          <option value="{{ strtoupper($region->RegionId) }}">{{ strtoupper($region->Region) }}</option>
-                                        @endforeach
-                                    </select>
+                                    <input type="text" class="form-control" id="last_known_school" name="last_known_school" placeholder="Enter Previous School" aria-describedby="basic-icon-default-fullname2"/>
                                   </div>
                               </div>
-                                
-                             <div class="col-md-4 col-sm-4 p-1">
-                              <label class="col-form-label" for="basic-icon-default-fullname">Student's Image <label class="text-danger" style="font-size: 15px;">*</label></label>
-                                <div class="input-group input-group-merge">
-                                  <span id="basic-icon-default-fullname2" class="input-group-text"
-                                    ><i class="bx bx-book"></i
-                                  ></span>
-                                  <input type="file" class="form-control" id="basic-icon-default-fullname"/>
-                                </div>
-                            </div>
-                              <input type="text" class="form-control" id="user_id" name="user_id" placeholder="Address" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" hidden value="2" />
+                              <div class="col-md-4 col-sm-4 p-1">
+                                <label class="col-form-label" for="basic-icon-default-fullname">Last Known Class
+                                 <label class="text-danger" style="font-size: 15px;">*</label>
+                               </label>
+                                  <div class="input-group input-group-merge">
+                                    <span id="basic-icon-default-fullname2" class="input-group-text">
+                                      <i class="bx bx-table"></i>
+                                    </span>
+                                    <input type="text" class="form-control" id="last_known_class" name="last_known_class" placeholder="" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2"/>
+                                  </div>
+                              </div>
+                             <!--  <div class="col-md-4 col-sm-4 p-1">
+                                <label class="col-form-label" for="basic-icon-default-fullname">Last Known Class
+                                 <label class="text-danger" style="font-size: 15px;">*</label>
+                               </label>
+                                  <div class="input-group input-group-merge">
+                                    <span id="basic-icon-default-fullname2" class="input-group-text">
+                                      <i class="bx bx-table"></i>
+                                    </span>
+                                    <input type="text" class="form-control" id="last_known_class" name="last_known_class" placeholder="" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2"/>
+                                  </div>
+                              </div> -->
+                              <input type="text" class="form-control" id="user_id" name="user_id" placeholder="Address" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" value="000b6865-cd12-3a24-851b-af350ac2e44e" />
                              <div class="row mt-4">
                               <div class="col-md-6">
                                 <div class="row justify-content-end">
                                   <div class="col-sm-9">
                                     <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
-                                    <button type="reset" class="btn btn-label-secondary">Cancel</button>
+                                    <button type="reset" class="btn btn-label-secondary">Clear</button>
                                   </div>
                                 </div>
                               </div>
@@ -197,3 +204,58 @@
   @include('inc.update')
     <!-- / Layout wrapper -->
  @include('inc.script')
+
+ <script type="text/javascript">
+   $(document).ready(function() {
+    $('#student_form_submission').submit(function(e) {
+        e.preventDefault(); // Prevent default form submission
+
+        // Collect form data
+        var formData = new FormData(this);
+        var firstname = $('#firstname').val();
+        var lastname = $('#lastname').val();
+
+        // Client-side validation
+        if (firstname.length < 3 || lastname.length < 3) {
+            // Display SweetAlert error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Validation Error',
+                text: 'First name and Last name must be at least 3 characters long.'
+            });
+            return;
+        }
+
+        $.ajax({
+            url: '/studentstore', // Assuming 'studentstore' is the route
+            type: 'POST',
+            data: formData,
+            dataType: 'json',
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                // Handle success response
+                // console.log(response);
+                // Display SweetAlert success message
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Form submitted successfully.'
+                });
+                // Optionally, you can redirect the user to another page upon success
+            },
+            error: function(xhr, status, error) {
+                // Handle error response
+                console.error(xhr.responseText);
+                // Display SweetAlert error message
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred while submitting the form. Please try again later.'
+                });
+            }
+        });
+    });
+});
+
+ </script>
