@@ -204,8 +204,8 @@
                       </div>
                     </div>
                     <div class="flex-grow-1">
-                      <span class="fw-medium d-block">John Appiah</span>
-                      <small class="text-muted">Developer</small>
+                      <span class="fw-medium d-block">{{ session('user')->Fullname }}</span>
+                      <small class="text-muted">{{ session('user')->Role }}</small>
                     </div>
                   </div>
                 </a>

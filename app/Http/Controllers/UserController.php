@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+// use Illuminate\Foundation\Auth\User;
 use Session;
 use App\Models\User;
 use Hash;
@@ -23,30 +24,36 @@ class UserController extends Controller
         return view('user.list', compact('users'));
     } 
 
-    
+
     public function singinAction(Request $request)
-    {
-        $request->validate([
-            'username' => 'required',
-            'password' => 'required',
-        ]);
+   {
+    $request->validate([
+        'username' => 'required',
+        'password' => 'required',
+    ]);
 
-        $credentials = $request->only('username', 'password');
+    $username = $request->input('username');
+    $password = $request->input('password');
 
-        if (Auth::attempt($credentials)) {
-            // Authentication successful
-            $request->session()->regenerate();
-            return redirect()->intended('home/dashboard'); 
-            // Redirect to dashboard after login
+    // Retrieve the user record from the database based on the provided username
+    $user = User::where('username', $username)->first();
+
+    if ($user==true){
+        // Verify the password
+        if (Hash::check($password, $user->Password)) {
+            // Password is correct
+            // Store user details in the session
+            $request->session()->put('user', $user);
+            // return response()->json(['success' => true, 'id_generated' => $user], 200);
+            // Redirect to the dashboard or intended page
+            return redirect()->intended('dashboard');
         }
-
-        // Authentication failed
-        return redirect()->back()->withErrors(['loginError' => 'Invalid username or password']);
     }
 
+    return redirect()->back()->withErrors(['loginError' => 'Invalid username and/or password']);
+   }
 
-    // code logout method
-    public function logout()
+   public function logout()
     {
         Session::flush();
         Auth::logout();
@@ -58,21 +65,27 @@ class UserController extends Controller
         return view('auth.registration');
     }
 
-    // code action login method
-    public function actionLogin(Request $request)
-    {
-        $request->validate([
-            'email' => 'required',
-            'password' => 'required',
-        ]);
- 
-        $credentials = $request->only('email', 'password');
+    
+    // public function singin_Action(Request $request)
+    // {
+    //     $request->validate([
+    //         'username' => 'required',
+    //         'password' => 'required',
+    //     ]);
 
-        if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
-                ->withSuccess('You have Successfully loggedin');
-        }
-        return redirect("login")->withSuccess('Please enter valid credentials');
-    }
+    //     $credentials = $request->only('username', 'password');
+
+    //     if (Auth::attempt($credentials)) {
+    //         $request->session()->regenerate();
+    //         return redirect()->intended('home/dashboard'); 
+    //     }
+
+    //     return redirect()->back()->withErrors(['loginError' => 'Invalid username and or password']);
+    // }
+
+
+    // code logout method
+    
+
 
 }

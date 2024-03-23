@@ -166,7 +166,7 @@
                                     <input type="text" class="form-control" id="last_known_class" name="last_known_class" placeholder="" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2"/>
                                   </div>
                               </div> -->
-                              <input type="text" class="form-control" id="user_id" name="user_id" placeholder="Address" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" value="000b6865-cd12-3a24-851b-af350ac2e44e" />
+                              <input type="text" class="form-control" id="user_id" name="user_id" aria-describedby="basic-icon-default-fullname2" value="{{ session('user')->UserId }}" hidden/>
                              <div class="row mt-4">
                               <div class="col-md-6">
                                 <div class="row justify-content-end">

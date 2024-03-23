@@ -17,8 +17,8 @@ class CreateSystemdataTable extends Migration
 			$table->binary('Image');
 			$table->string('Logo',250);
 			$table->string('UserId',20);
-			$table->string('Slogan',100);
-			$table->string('Version',50);
+			$table->string('Slogan',100)->default('Anywhere, Everywhere!');
+			$table->string('Version',50)->default('1.0323');
 			$table->string('DefaultLanguage',20)->default('en');
 			$table->string('AddedId',20);
 			$table->datetime('AddedDate')->useCurrent();

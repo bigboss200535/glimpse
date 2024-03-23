@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Faker\Factory as Faker;
+use Hash;
 
 class UserSeeder extends Seeder
 {
@@ -18,7 +19,7 @@ class UserSeeder extends Seeder
             DB::table('users')->insert([
                 'UserId' => $faker->uuid,
                 'Username' => $faker->userName,
-                'Password' => bcrypt('password'),
+                'Password' =>  Hash::make('password'),
                 'Title' => $faker->title,
                 'Firstname' => $faker->firstName,
                 'Lastname' => $faker->lastName,

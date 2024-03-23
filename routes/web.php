@@ -82,5 +82,5 @@ Route::get('/editclass', [ClassesController::class, 'edit']);
 //SAVES DATA INTO THE DATABASE
 Route::post('studentstore', [StudentController::class, 'store'])->name('student.store');
 
-Route::post('/signin', [UserController::class, 'singinAction'])->name('singinAction');
+Route::post('/signin', [UserController::class, 'singinAction']);
 
