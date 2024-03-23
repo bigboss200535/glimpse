@@ -48,10 +48,6 @@ Route::get('/dashboard', function () {
 // });
 
 
-// Route::get('/addstudent', function () {
-//     return view('student/add');
-// });
-
 Route::get('/addstaff', function () {
     return view('user/add');
 });

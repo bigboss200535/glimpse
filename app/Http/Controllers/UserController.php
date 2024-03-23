@@ -67,6 +67,7 @@ class UserController extends Controller
         ]);
  
         $credentials = $request->only('email', 'password');
+
         if (Auth::attempt($credentials)) {
             return redirect()->intended('dashboard')
                 ->withSuccess('You have Successfully loggedin');
@@ -74,9 +75,4 @@ class UserController extends Controller
         return redirect("login")->withSuccess('Please enter valid credentials');
     }
 
-    // code login method
-    // public function index()
-    // {
-    //     return view('auth.login');
-    // }
 }
