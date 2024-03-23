@@ -43,9 +43,12 @@
                           </tr>
                         </thead>
                         <tbody class="table-border-bottom-0">
+                            @php
+                                $counter = 1;
+                            @endphp
                           @foreach($students as $student_list)
                           <tr> 
-                            <td>{{ $student_list->StudentIdNo }}</td>
+                            <td>{{ $counter++ }}</td>
                             <td>
                               <span class="fw-medium">{{ $student_list->Fullname }}</span>
                             </td>

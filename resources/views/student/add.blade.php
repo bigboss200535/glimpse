@@ -60,6 +60,14 @@
                                   </div>
                               </div>
                               <div class="col-md-4 col-sm-4 p-1">
+                                <label class="col-form-label" for="basic-icon-default-fullname">Middle Name <label class="text-danger" style="font-size: 15px;">*</label></label>
+                                  <div class="input-group input-group-merge">
+                                    <span id="basic-icon-default-fullname2" class="input-group-text">
+                                      <i class="bx bx-user"></i></span>
+                                    <input type="text" class="form-control"  name="middlename" id="middlename" placeholder="Middle name" aria-label="Middle name" aria-describedby="basic-icon-default-fullname2"/>
+                                  </div>
+                              </div>
+                              <div class="col-md-4 col-sm-4 p-1">
                                 <label class="col-form-label" for="basic-icon-default-fullname">Last Name <label class="text-danger" style="font-size: 15px;">*</label></label>
                                   <div class="input-group input-group-merge">
                                     <span id="basic-icon-default-fullname2" class="input-group-text">
@@ -97,6 +105,14 @@
                                       <span id="basic-icon-default-fullname2" class="input-group-text">
                                         <i class="bx bx-book"></i></span>
                                       <input type="date" class="form-control" name="birth_date" id="birth_date" placeholder="Address" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 p-1">
+                                  <label class="col-form-label" for="basic-icon-default-fullname">Age <label class="text-danger" style="font-size: 15px;">*</label></label>
+                                    <div class="input-group input-group-merge">
+                                      <span id="basic-icon-default-fullname2" class="input-group-text">
+                                        <i class="bx bx-book"></i></span>
+                                      <input type="text" class="form-control" name="age" id="age" aria-describedby="basic-icon-default-fullname2" disabled />
                                     </div>
                                 </div>
                                <div class="col-md-4 col-sm-4 p-1">
@@ -155,18 +171,7 @@
                                     <input type="text" class="form-control" id="last_known_class" name="last_known_class" placeholder="" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2"/>
                                   </div>
                               </div>
-                             <!--  <div class="col-md-4 col-sm-4 p-1">
-                                <label class="col-form-label" for="basic-icon-default-fullname">Last Known Class
-                                 <label class="text-danger" style="font-size: 15px;">*</label>
-                               </label>
-                                  <div class="input-group input-group-merge">
-                                    <span id="basic-icon-default-fullname2" class="input-group-text">
-                                      <i class="bx bx-table"></i>
-                                    </span>
-                                    <input type="text" class="form-control" id="last_known_class" name="last_known_class" placeholder="" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2"/>
-                                  </div>
-                              </div> -->
-                              <input type="text" class="form-control" id="user_id" name="user_id" aria-describedby="basic-icon-default-fullname2" value="{{ session('user')->UserId }}" hidden/>
+                              <input type="text" class="form-control" id="user_id" name="user_id" aria-describedby="basic-icon-default-fullname2" value="{{ session('user')->UserId }}" hidden />
                              <div class="row mt-4">
                               <div class="col-md-6">
                                 <div class="row justify-content-end">
