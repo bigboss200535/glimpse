@@ -208,7 +208,7 @@
  <script type="text/javascript">
    $(document).ready(function() {
     $('#student_form_submission').submit(function(e) {
-        e.preventDefault(); // Prevent default form submission
+        e.preventDefault(); 
 
         // Collect form data
         var formData = new FormData(this);
@@ -227,7 +227,7 @@
         }
 
         $.ajax({
-            url: '/studentstore', // Assuming 'studentstore' is the route
+            url: '/studentstore',
             type: 'POST',
             data: formData,
             dataType: 'json',
@@ -235,18 +235,18 @@
             processData: false,
             success: function(response) {
                 // Handle success response
-                // console.log(response);
+                
                 // Display SweetAlert success message
                 Swal.fire({
                     icon: 'success',
                     title: 'Success',
                     text: 'Form submitted successfully.'
                 });
-                // Optionally, you can redirect the user to another page upon success
+                
             },
             error: function(xhr, status, error) {
                 // Handle error response
-                console.error(xhr.responseText);
+                // console.error(xhr.responseText);
                 // Display SweetAlert error message
                 Swal.fire({
                     icon: 'error',

@@ -23,6 +23,27 @@ class UserController extends Controller
         return view('user.list', compact('users'));
     } 
 
+    
+    public function singinAction(Request $request)
+    {
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+
+        $credentials = $request->only('username', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // Authentication successful
+            $request->session()->regenerate();
+            return redirect()->intended('home/dashboard'); 
+            // Redirect to dashboard after login
+        }
+
+        // Authentication failed
+        return redirect()->back()->withErrors(['loginError' => 'Invalid username or password']);
+    }
+
 
     // code logout method
     public function logout()

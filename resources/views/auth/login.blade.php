@@ -58,17 +58,35 @@
         <h4 class="mb-2" align="center">Welcome to {{ config('app.name') }} ! 👋</h4>
         <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
-        <form id="formAuthentication" class="mb-3" action="/dashboard">
+        <form id="formAuthentication" class="mb-3" action="{{ url('signin') }}" method="post">
+           @csrf
+
+           @if(session()->has('success'))
+                          <div class="col-md-10" align="center" style="margin-left:30px">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                  <strong>{{ __('success') }}! </strong>{{ __('payer_id_saved')}}: <b> {{ session()->get('success') }}</b>
+                            </div>
+                          </div>
+                      @endif
+                        @if ($errors->any())
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <div style="margin-left:30px">
+                                      <p style="color: red">{{ $error }}</p>
+                                    </div>
+                            @endforeach
+                            </ul>
+                      @endif
           <div class="mb-3">
             <label for="email" class="form-label">Username</label>
-            <input type="text" class="form-control" id="email" name="email-username" placeholder="Username" autofocus value="admin">
+            <input type="text" class="form-control" id="email" name="email-username" placeholder="Username" autofocus value="qheller">
           </div>
           <div class="mb-3 form-password-toggle">
             <div class="d-flex justify-content-between">
               <label class="form-label" for="password">Password</label>
             </div>
             <div class="input-group input-group-merge">
-              <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" value="admin" />
+              <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" value="password" />
               <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
             </div>
           </div>
@@ -80,7 +98,7 @@
               </label>
             </div>
           </div>
-          <button class="btn btn-primary d-grid w-100">
+          <button class="btn btn-primary d-grid w-100" type="submit">
             Sign in
           </button>
         </form>
@@ -115,6 +133,6 @@
   <script src="{{ asset('vendor/libs/@form-validation/bootstrap5.js') }}"></script>
   <script src="{{ asset('vendor/libs/@form-validation/auto-focus.js') }}"></script>
   <script src="{{ asset('js/main.js') }}"></script>
-  <script src="{{ asset('js/pages-auth.js') }}"></script>
+  <!-- <script src="{{ asset('js/pages-auth.js') }}"></script> -->
 </body>
 </html>

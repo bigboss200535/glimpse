@@ -2,10 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
-
 use App\Http\Controllers\ClassController;
 use App\Http\Controllers\UserController;
-
 use App\Http\Controllers\ClassesController;
 
 use Illuminate\Support\Facades\Session;
@@ -28,6 +26,10 @@ use Illuminate\Support\Facades\Session;
 
 
 Route::get('/', function () {
+    return view('auth/login');
+});
+
+Route::get('/login', function () {
     return view('auth/login');
 });
 
@@ -83,3 +85,6 @@ Route::get('/editclass', [ClassesController::class, 'edit']);
 
 //SAVES DATA INTO THE DATABASE
 Route::post('studentstore', [StudentController::class, 'store'])->name('student.store');
+
+Route::post('/signin', [UserController::class, 'singinAction'])->name('singinAction');
+
