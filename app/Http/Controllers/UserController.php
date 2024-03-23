@@ -36,7 +36,7 @@ class UserController extends Controller
     $password = $request->input('password');
 
     // Retrieve the user record from the database based on the provided username
-    $user = User::where('username', $username)->first();
+    $user = User::where('Username', $username)->first();
 
     if ($user==true){
         // Verify the password
@@ -50,14 +50,16 @@ class UserController extends Controller
         }
     }
 
-    return redirect()->back()->withErrors(['loginError' => 'Invalid username and/or password']);
+    return redirect()->back()->withErrors(['loginError' => 'Invalid credentials']);
    }
 
-   public function logout()
+   public function logout(Request $request)
     {
+        $ipAddress = $request->ip();
+        $computerName = gethostname();
         Session::flush();
         Auth::logout();
-        return Redirect('login');
+        return Redirect('/');
     }
 
     public function registration()

@@ -64,16 +64,18 @@
            @if(session()->has('success'))
                           <div class="col-md-10" align="center" style="margin-left:30px">
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                  <strong>{{ __('success') }}! </strong>{{ __('payer_id_saved')}}: <b> {{ session()->get('success') }}</b>
+                                  <strong>{{ __('success') }}! </strong><b> {{ session()->get('success') }}</b>
                             </div>
                           </div>
                       @endif
                         @if ($errors->any())
                             <ul>
                                 @foreach ($errors->all() as $error)
-                                    <div style="margin-left:30px">
-                                      <p style="color: red">{{ $error }}</p>
+                                <div class="col-md-10" align="center" style="margin-left:30px" align="center">
+                                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                  <strong>Ops! </strong><b> {{ $error }}</b>
                                     </div>
+                                </div>
                             @endforeach
                             </ul>
                       @endif

@@ -253,9 +253,15 @@
                 <div class="dropdown-divider"></div>
               </li> -->
               <li>
-                <a class="dropdown-item" href="/" target="_blank">
-                  <i class="bx bx-power-off me-2"></i>
-                  <span class="align-middle">Log Out</span>
+                <a class="dropdown-item" href="/">
+                  
+                  <form method="post" action="{{ url('logout') }}">
+                     @csrf
+                     <input type="hidden" name="user_id" value="{{ session('user')->UserId }}">
+                      <i class="bx bx-power-off me-2"></i>
+                     <span class="align-middle" onclick="event.preventDefault(); this.closest('form').submit();">Log Out
+                       </span>
+                  </form>
                 </a>
               </li>
             </ul>

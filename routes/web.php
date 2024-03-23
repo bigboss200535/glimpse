@@ -18,29 +18,36 @@ use Illuminate\Support\Facades\Session;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/', [AuthController::class, 'index'])->name('login');
-
-// Route::get('login', [AuthController::class, 'index'])->name('login');
-
-// Route::post('action-login', [AuthController::class, 'actionLogin'])->name('login.action');
 
 
+// user management
 Route::get('/', function () {
-    return view('auth/login');
+    return view('auth/login'); //login page
 });
 
 Route::get('/login', function () {
-    return view('auth/login');
+    return view('auth/login'); //login page
 });
+
+// signin and signup
+Route::post('/signin', [UserController::class, 'singinAction']);//login action
+Route::post('logout/{UserId}', 'UserController@logout')->name('logout'); //logout action
+
+Route::get('/dashboard', function () {
+    return view('home/dashboard'); //view dashboard
+});
+
+// user details
+Route::get('/users', [UserController::class, 'index']); //fetch users
+Route::get('/user/{UserId}', [UserController::class, 'show']); //moddify user with userid
+
+
 
 Route::get('/fee', function () {
     return view('fees/add');
 });
 
 
-Route::get('/dashboard', function () {
-    return view('home/dashboard');
-});
 
 
 // Route::get('/class', function () {
@@ -53,9 +60,10 @@ Route::get('/addstaff', function () {
 });
 
 
-Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/user/{UserId}', [UserController::class, 'show']);
+
+
+
 
 // Route::get('/locale/{locale}', function (Request $request, $locale) {
 //     Session::put('locale', $locale);
@@ -63,24 +71,16 @@ Route::get('/user/{UserId}', [UserController::class, 'show']);
 // })->name('locale');
 
 //LAUNCHES THE LIST FORM FOR RECORDS FROM THE DATABASE
-Route::get('/students', [StudentController::class, 'index']);
-
-Route::get('/users', [UserController::class, 'index']);
-Route::get('/class', [ClassesController::class, 'index']);
 
 // Route::get('/class', [ClassesController::class, 'index']);
 
-
-//LAUNCHES THE ADD FORMS
-Route::get('/addstudent', [StudentController::class, 'create']);
+// class details
 Route::get('/addclass', [ClassesController::class, 'create']);
-
-//LAUNCHES THE EDIT FORM
 Route::get('/editclass', [ClassesController::class, 'edit']);
+Route::get('/class', [ClassesController::class, 'index']);
 
-
-//SAVES DATA INTO THE DATABASE
-Route::post('studentstore', [StudentController::class, 'store'])->name('student.store');
-
-Route::post('/signin', [UserController::class, 'singinAction']);
+// student details
+Route::get('/students', [StudentController::class, 'index']); //list all student
+Route::get('/addstudent', [StudentController::class, 'create']); //view student forms
+Route::post('studentstore', [StudentController::class, 'store'])->name('student.store'); //save student action
 
