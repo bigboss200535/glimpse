@@ -41,7 +41,7 @@ class UserController extends Controller
         $username = $request->input('username');
         $password = $request->input('password');
 
-        // Retrieve the user record from the database based on the provided username
+        // Retrieve the user record from the database based on username
         $user = User::where('Username', $username)->first();
         // return response()->json(['success' => true, 'users' => $user], 200);
         if ($user==true){
@@ -50,7 +50,7 @@ class UserController extends Controller
                 // Store user details in the session
                 $request->session()->put('user', $user);
                 
-                // Redirect to the dashboard or intended page
+                // Redirect to the dashboard 
                 return redirect()->intended('dashboard');
             }
         }

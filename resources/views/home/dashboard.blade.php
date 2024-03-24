@@ -57,7 +57,7 @@
                              
                             </div>
                           </div>
-                          <span class="fw-medium d-block mb-1">Male Students</span>
+                          <span class="fw-medium d-block mb-1">Male Pupils</span>
                           <h3 class="card-title mb-2">12,628</h3>
                           <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
                         </div>
@@ -68,10 +68,8 @@
                         <div class="card-body">
                           <div class="card-title d-flex align-items-start justify-content-between">
                             <div class="avatar flex-shrink-0">
-                              <img
-                                src="{{ asset('img/icons/unicons/wallet-info.png') }}"
-                                alt="Credit Card"
-                                class="rounded" />
+                              <img src="{{ asset('img/icons/unicons/wallet-info.png') }}"
+                                alt="Credit Card" class="rounded" />
                             </div>
                             <div class="dropdown">
                               <!-- <button
@@ -89,7 +87,7 @@
                               </div> -->
                             </div>
                           </div>
-                          <span>Female Students</span>
+                          <span>Female Pupils</span>
                           <h3 class="card-title text-nowrap mb-1">4,679</h3>
                           <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> +28.42%</small>
                         </div>
