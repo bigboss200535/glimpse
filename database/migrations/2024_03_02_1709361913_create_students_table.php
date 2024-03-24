@@ -12,7 +12,8 @@ class CreateStudentsTable extends Migration
 				$table->string('StudentId',50);
 				$table->string('Firstname',100);
 				$table->string('Lastname',100);
-				$table->string('Fullname')->virtualAs("CONCAT(Firstname, ' ', Lastname)");
+				$table->string('Middlename',100);
+				$table->string('Fullname')->virtualAs("CONCAT(Lastname, ' ', Firstname, ' ',Middlename)");
 				$table->string('Gender',10);
 				$table->string('NationalityId',50);
 				$table->string('Address',150);
@@ -20,8 +21,6 @@ class CreateStudentsTable extends Migration
 				$table->string('ReligionId',50);
 				$table->string('RegionId',50);
 				$table->datetime('DateJoined')->useCurrent();
-				// $table->string('DenominationId',20);
-				// $table->string('SectionId',50);
 				$table->string('Transaction',200)->nullable();
 				$table->string('PreviousSchool',100)->nullable();
 				$table->string('PreviousClass',100)->nullable();

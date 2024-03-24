@@ -25,6 +25,7 @@ class Student extends Model
         'StudentId',
         'Firstname',
         'Lastname',
+        'Middlename',
         'Gender',
         'NationalityId',
         'Address',

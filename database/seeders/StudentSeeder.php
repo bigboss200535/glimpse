@@ -24,6 +24,7 @@ class StudentSeeder extends Seeder
                 'StudentId' => $faker->uuid,
                 'Firstname' => $faker->firstName,
                 'Lastname' => $faker->lastName,
+                'Middlename' => $faker->lastName,
                 'Gender' => $faker->randomElement(['Male', 'Female']),
                 'NationalityId' => $faker->randomElement($nationalityIds),
                 'Address' => $faker->address,

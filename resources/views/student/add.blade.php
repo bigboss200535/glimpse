@@ -38,7 +38,6 @@
                           <form method="post" id="student_form_submission" action="{{ url('studentstore') }}">
                               @csrf
                             <div class="row">
-                             
                              <!--  <table class="table-border-bottom-0 table">
                                 <tr>
                                   <td>
@@ -60,7 +59,7 @@
                                   </div>
                               </div>
                               <div class="col-md-4 col-sm-4 p-1">
-                                <label class="col-form-label" for="basic-icon-default-fullname">Middle Name <label class="text-danger" style="font-size: 15px;">*</label></label>
+                                <label class="col-form-label" for="basic-icon-default-fullname">Middle Name <label class="" style="font-size: 15px; color: white;">*</label></label>
                                   <div class="input-group input-group-merge">
                                     <span id="basic-icon-default-fullname2" class="input-group-text">
                                       <i class="bx bx-user"></i></span>
@@ -104,7 +103,7 @@
                                     <div class="input-group input-group-merge">
                                       <span id="basic-icon-default-fullname2" class="input-group-text">
                                         <i class="bx bx-book"></i></span>
-                                      <input type="date" class="form-control" name="birth_date" id="birth_date" placeholder="Address" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" />
+                                      <input type="date" class="form-control" name="birth_date" id="birth_date" aria-label="John Doe" onchange="calculateAge()" aria-describedby="basic-icon-default-fullname2" />
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4 p-1">
@@ -219,6 +218,8 @@
         var formData = new FormData(this);
         var firstname = $('#firstname').val();
         var lastname = $('#lastname').val();
+        var birth_date = $('#birth_date').val();
+        var ageInput = $('#age').val();
 
         // Client-side validation
         if (firstname.length < 3 || lastname.length < 3) {
@@ -262,5 +263,43 @@
         });
     });
 });
+ </script>
+ <script type="text/javascript">
+         // JavaScript
+      document.addEventListener('DOMContentLoaded', function() {
+          // Get the birth date input field
+          var birthDateInput = document.getElementById('birth_date');
 
+          // Add event listener for input change
+          birthDateInput.addEventListener('input', function() {
+              // Get the selected birth date value
+              var dob = new Date(this.value);
+              if (!isValidDate(dob)) return;
+
+              // Calculate the age
+              var age = calculateAge(dob);
+
+              // Set the calculated age to the age input field
+              document.getElementById('age').value = age;
+          });
+      });
+
+      // Function to calculate age based on birth date
+      function calculateAge(birthDate) {
+          var now = new Date();
+          var dob = new Date(birthDate);
+          var age = now.getFullYear() - dob.getFullYear();
+          var monthDiff = now.getMonth() - dob.getMonth();
+
+          if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < dob.getDate())) {
+              age--;
+          }
+
+          return age;
+      }
+
+      // Function to check if date is valid
+      function isValidDate(date) {
+          return !isNaN(date.getTime());
+      }
  </script>

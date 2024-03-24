@@ -30,7 +30,7 @@
                             You have done <span class="fw-medium">72%</span> more sales today. Check your new badge in
                             your profile.
                           </p>
-                          <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Profile</a>
+                          <a href="{{ url('profile') }}" class="btn btn-sm btn-outline-primary">View Profile</a>
                         </div>
                       </div>
                       <div class="col-sm-5 text-center text-sm-left">

@@ -41,6 +41,7 @@ class StudentController extends Controller
         $validatedData = $request->validate([
             'firstname' => 'required|min:3|max:100',
             'lastname' => 'required|min:3|max:100',
+            'middlename' => 'nullable|min:3|max:100',
             'gender' => 'nullable |min:1',
             'nationality' => 'nullable|min:3|max:100',
             'birth_date' => 'nullable',
@@ -71,6 +72,7 @@ class StudentController extends Controller
         $payer_details = new Student();
         $payer_details->StudentId = $id_generated;
         $payer_details->Firstname = strtoupper($request->input('firstname'));
+        $payer_details->Middlename = strtoupper($request->input('middlename'));
         $payer_details->Lastname = strtoupper($request->input('lastname'));
         $payer_details->Gender = $request->input('gender');
         $payer_details->NationalityId = $request->input('nationality');

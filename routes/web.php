@@ -48,7 +48,9 @@ Route::get('/fee', function () {
     return view('fees/add');
 });
 
-
+Route::get('/profile', function () {
+    return view('user/profile');
+});
 
 
 // Route::get('/class', function () {

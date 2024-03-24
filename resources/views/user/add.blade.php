@@ -43,3 +43,4 @@
   @include('inc.update')
     <!-- / Layout wrapper -->
  @include('inc.script')
+ 
