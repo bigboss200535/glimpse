@@ -57,8 +57,8 @@
                              
                             </div>
                           </div>
-                          <span class="fw-medium d-block mb-1">Profit</span>
-                          <h3 class="card-title mb-2">$12,628</h3>
+                          <span class="fw-medium d-block mb-1">Male Students</span>
+                          <h3 class="card-title mb-2">12,628</h3>
                           <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
                         </div>
                       </div>
@@ -89,8 +89,8 @@
                               </div> -->
                             </div>
                           </div>
-                          <span>Sales</span>
-                          <h3 class="card-title text-nowrap mb-1">$4,679</h3>
+                          <span>Female Students</span>
+                          <h3 class="card-title text-nowrap mb-1">4,679</h3>
                           <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> +28.42%</small>
                         </div>
                       </div>

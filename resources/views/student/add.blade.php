@@ -17,14 +17,17 @@
             <!-- Content -->
               @include ('inc.preloader')
                <div class="container-xxl flex-grow-1 container-p-y">
+                <h4 class="py-3 mb-4">
+                              <span class="text-muted fw-light">Registration/</span> Student
+                          </h4>
                 <div class="row">
                   <div class="col">
-                    <h6 class="mt-4"> Add New Student </h6>
+                    <!-- <h6 class="mt-4"> Add New Student </h6> -->
                     <div class="nav-align-top mb-3">
                       <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item">
+                       <!--  <li class="nav-item">
                           <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#form-tabs-personal" role="tab" aria-selected="true">Personal Info</button>
-                        </li>
+                        </li> -->
                        <!--  <li class="nav-item">
                           <button class="nav-link " data-bs-toggle="tab" data-bs-target="#form-tabs-account" role="tab" aria-selected="false">Academic Details</button>
                         </li> -->
@@ -150,7 +153,7 @@
                               </div>
                               <div class="col-md-4 col-sm-4 p-1">
                                 <label class="col-form-label" for="basic-icon-default-fullname">Last Known School
-                                 <label class="text-danger" style="font-size: 15px;">*</label>
+                                   <label style="font-size: 15px;color: white;">*</label>
                                </label>
                                   <div class="input-group input-group-merge">
                                     <span id="basic-icon-default-fullname2" class="input-group-text">
@@ -161,7 +164,7 @@
                               </div>
                               <div class="col-md-4 col-sm-4 p-1">
                                 <label class="col-form-label" for="basic-icon-default-fullname">Last Known Class
-                                 <label class="text-danger" style="font-size: 15px;">*</label>
+                                 <label style="font-size: 15px;color: white;">*</label>
                                </label>
                                   <div class="input-group input-group-merge">
                                     <span id="basic-icon-default-fullname2" class="input-group-text">
@@ -170,7 +173,18 @@
                                     <input type="text" class="form-control" id="last_known_class" name="last_known_class" placeholder="" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2"/>
                                   </div>
                               </div>
-                              <input type="text" class="form-control" id="user_id" name="user_id" aria-describedby="basic-icon-default-fullname2" value="{{ session('user')->UserId }}" hidden />
+                               <div class="col-md-4 col-sm-4 p-1">
+                                <label class="col-form-label" for="basic-icon-default-fullname">User
+                                 <label class="text-danger" style="font-size: 15px;">*</label>
+                               </label>
+                                  <div class="input-group input-group-merge">
+                                    <span id="basic-icon-default-fullname2" class="input-group-text">
+                                      <i class="bx bx-table"></i>
+                                    </span>
+                                    <input type="text" class="form-control" id="user_id" name="user_id" value="{{ session('user')->UserId }}" aria-describedby="basic-icon-default-fullname2"/>
+                                  </div>
+                              </div>
+                              <!-- <input type="text" class="form-control" id="user_id" name="user_id" aria-describedby="basic-icon-default-fullname2" value="{{ session('user')->UserId }}" hidden /> -->
                              <div class="row mt-4">
                               <div class="col-md-6">
                                 <div class="row justify-content-end">
@@ -218,19 +232,100 @@
         var formData = new FormData(this);
         var firstname = $('#firstname').val();
         var lastname = $('#lastname').val();
+        var gender = $('#gender').val();
+        var nationality = $('#nationality').val();
         var birth_date = $('#birth_date').val();
-        var ageInput = $('#age').val();
-
+        var religion = $('#religion').val();
+        var address = $('#address').val();
+        var region = $('#region').val();
+        var user_id = $('#user_id').val();
         // Client-side validation
-        if (firstname.length < 3 || lastname.length < 3) {
+        if (firstname.length < 3 ) {
             // Display SweetAlert error message
             Swal.fire({
                 icon: 'error',
                 title: 'Validation Error',
-                text: 'First name and Last name must be at least 3 characters long.'
+                text: 'First name must be at least 3 characters long.'
             });
             return;
         }
+         if (lastname.length < 3) {
+            // Display SweetAlert error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Validation Error',
+                text: 'Last name must be at least 3 characters long.'
+            });
+            return;
+        }
+
+         if (!gender) {
+            // Display SweetAlert error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Validation Error',
+                text: 'Gender is required'
+            });
+            return;
+        }
+        if (!nationality) {
+            // Display SweetAlert error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Validation Error',
+                text: 'Nationality is required'
+            });
+            return;
+        }
+        if (!birth_date) {
+            // Display SweetAlert error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Validation Error',
+                text: 'Birth date is required.'
+            });
+            return;
+        }
+
+         if (!religion) {
+            // Display SweetAlert error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Validation Error',
+                text: 'Religion is required.'
+            });
+            return;
+        }
+        if (address.length === '') {
+            // Display SweetAlert error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Validation Error',
+                text: 'Address is required.'
+            });
+            return;
+        }
+        if (!region) {
+            // Display SweetAlert error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Validation Error',
+                text: 'Region is required.'
+            });
+            return;
+        }
+
+        if (user_id.length === '') {
+            // Display SweetAlert error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Validation Error',
+                text: 'There was a problem saving.'
+            });
+            return;
+        }
+
+
 
         $.ajax({
             url: '/studentstore',
