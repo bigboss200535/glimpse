@@ -43,11 +43,14 @@
                           </tr>
                         </thead>
                         <tbody class="table-border-bottom-0">
-                         
+                         @php
+                                $counter = 1;
+                            @endphp
+
                           @foreach($users as $user)
                             <!-- @count = @count + 1; -->
                           <tr> 
-                            <td>1</td>
+                            <td>{{ $counter++ }}</td>
                             <td>
                               <span class="fw-medium">{{ $user->Fullname }}</span>
                             </td>
@@ -63,16 +66,20 @@
                                 @endif
                             </td>
                             <td>
-                                <div class="dropdown">
+                                <div class="dropdown" align="center">
                                         <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit
+                                                <a class="dropdown-item" href="javascript:void(0);">
+                                                  <i class="bx bx-edit-alt me-1"></i> Edit
+                                                </a>
+                                                <a class="dropdown-item" href="javascript:void(0);">
+                                                  <i class="bx bx-lock-alt me-1"></i> Permission 
                                                 </a>
                                                 <a class="dropdown-item" href="javascript:void(0);">
                                                     <i class="bx bx-trash me-1"></i> Delete
-                                                  </a>
+                                                </a>
                                            </div>
                                 </div>
                             </td>

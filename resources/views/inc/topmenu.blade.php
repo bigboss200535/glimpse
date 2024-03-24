@@ -61,7 +61,7 @@
                     <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
                     <i class="bx bx-user fs-4"></i>
                     </span>
-                    <a href="#" class="stretched-link">Student</a>
+                    <a href="{{ url('students')}}" class="stretched-link">Student</a>
                     <small class="text-muted mb-0">Manage Student</small>
                   </div>
                   <div class="dropdown-shortcuts-item col">
@@ -69,7 +69,7 @@
                       <i class="bx bx-user fs-4"></i>
                       
                     </span>
-                    <a href="#" class="stretched-link">Staff</a>
+                    <a href="{{ url('users')}}" class="stretched-link">Staff</a>
                     <small class="text-muted mb-0">Manage Staff</small>
                   </div>
                 </div>

@@ -81,6 +81,9 @@ Route::get('/students', [StudentController::class, 'index']); //list all student
 Route::get('/addstudent', [StudentController::class, 'create']); //view student forms
 Route::post('studentstore', [StudentController::class, 'store'])->name('student.store'); //save student action
 
+Route::get('/{StudentId}/modify', [StudentController::class, 'edit'])
+    ->name('student.edit');
+
 Route::group(['middleware' => 'auth.redirect'], function () {
    Route::get('/dashboard', function () {
     return view('home/dashboard'); //view dashboard

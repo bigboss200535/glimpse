@@ -179,16 +179,6 @@
                 <small class="text-muted">6 Day Ago</small>
               </div>
               <p class="mb-2">Sent by Mollie Dixon <img src="{{ asset('img/avatars/4.png') }}" class="rounded-circle ms-3" alt="avatar" height="20" width="20"></p>
-              <div class="d-flex flex-wrap gap-2">
-                <a href="javascript:void(0)" class="me-3">
-                  <img src="{{ asset('img/icons/misc/pdf.png') }}" alt="Document image" width="20" class="me-2">
-                  <span class="h6">App Guidelines</span>
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="{{ asset('img/icons/misc/doc.png') }}" alt="Excel image" width="20" class="me-2">
-                  <span class="h6">Testing Results</span>
-                </a>
-              </div>
             </div>
           </li>
           <li class="timeline-item timeline-item-transparent">
@@ -213,32 +203,18 @@
       <div class="col-lg-12 col-xl-6">
         <div class="card card-action mb-4">
           <div class="card-header align-items-center">
-            <h5 class="card-action-title mb-0">Subjects</h5>
-            <!-- <div class="card-action-element">
-              <div class="dropdown">
-                <button type="button" class="btn dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-vertical-rounded"></i></button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="javascript:void(0);">Share connections</a></li>
-                  <li><a class="dropdown-item" href="javascript:void(0);">Suggest edits</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="javascript:void(0);">Report bug</a></li>
-                </ul>
-              </div>
-            </div> -->
+            <h5 class="card-action-title mb-0">Assigned Subjects</h5>
+            
           </div>
           <div class="card-body">
             <ul class="list-unstyled mb-0">
               <li class="mb-3">
                 <div class="d-flex align-items-start">
                   <div class="d-flex align-items-start">
-                    <div class="avatar me-3">
-                      <img src="{{ asset('img/avatars/2.png') }}" alt="Avatar" class="rounded-circle" />
-                    </div>
+                  
                     <div class="me-2">
-                      <h6 class="mb-0">Cecilia Payne</h6>
-                      <small class="text-muted">45 Connections</small>
+                      <h6 class="mb-0">DATABASE DESIGN</h6>
+                      <!-- <small class="text-muted">45 Connections</small> -->
                     </div>
                   </div>
                   <div class="ms-auto">
@@ -249,12 +225,10 @@
               <li class="mb-3">
                 <div class="d-flex align-items-start">
                   <div class="d-flex align-items-start">
-                    <div class="avatar me-3">
-                      <img src="{{ asset('img/avatars/2.png') }}" alt="Avatar" class="rounded-circle" />
-                    </div>
+                    
                     <div class="me-2">
-                      <h6 class="mb-0">Curtis Fletcher</h6>
-                      <small class="text-muted">1.32k Connections</small>
+                      <h6 class="mb-0">CORE MATHEMATICS</h6>
+                      <!-- <small class="text-muted">100 Students</small> -->
                     </div>
                   </div>
                   <div class="ms-auto">
@@ -265,12 +239,10 @@
               <li class="mb-3">
                 <div class="d-flex align-items-start">
                   <div class="d-flex align-items-start">
-                    <div class="avatar me-3">
-                      <img src="{{ asset('img/avatars/3.png') }}" alt="Avatar" class="rounded-circle" />
-                    </div>
+                   
                     <div class="me-2">
-                      <h6 class="mb-0">Alice Stone</h6>
-                      <small class="text-muted">125 Connections</small>
+                      <h6 class="mb-0">INTEGRATED SCIENCE</h6>
+                      <!-- <small class="text-muted">125 Students</small> -->
                     </div>
                   </div>
                   <div class="ms-auto">
@@ -281,12 +253,10 @@
               <li class="mb-3">
                 <div class="d-flex align-items-start">
                   <div class="d-flex align-items-start">
-                    <div class="avatar me-3">
-                      <img src="{{ asset('img/avatars/2.png') }}" alt="Avatar" class="rounded-circle" />
-                    </div>
+                    
                     <div class="me-2">
-                      <h6 class="mb-0">Darrell Barnes</h6>
-                      <small class="text-muted">456 Connections</small>
+                      <h6 class="mb-0">SOCIAL STUDIES</h6>
+                      <!-- <small class="text-muted">456 Students</small> -->
                     </div>
                   </div>
                   <div class="ms-auto">
@@ -296,12 +266,10 @@
               <li class="mb-3">
                 <div class="d-flex align-items-start">
                   <div class="d-flex align-items-start">
-                    <div class="avatar me-3">
-                      <img src="{{ asset('img/avatars/3.png') }}" alt="Avatar" class="rounded-circle" />
-                    </div>
+                    
                     <div class="me-2">
-                      <h6 class="mb-0">Eugenia Moore</h6>
-                      <small class="text-muted">1.2k Connections</small>
+                      <h6 class="mb-0">ENGLISH LANGUAGE</h6>
+                      <!-- <small class="text-muted">12 Students</small> -->
                     </div>
                   </div>
                   <div class="ms-auto">
@@ -309,9 +277,9 @@
                   </div>
                 </div>
               </li>
-              <li class="text-center">
+              <!-- <li class="text-center">
                 <a href="javascript:;">View all connections</a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -321,19 +289,8 @@
       <div class="col-lg-12 col-xl-6">
         <div class="card card-action mb-4">
           <div class="card-header align-items-center">
-            <h5 class="card-action-title mb-0">Class</h5>
+            <h5 class="card-action-title mb-0">Assigned Class</h5>
             <div class="card-action-element">
-              <div class="dropdown">
-                <button type="button" class="btn dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-vertical-rounded"></i></button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="javascript:void(0);">Share teams</a></li>
-                  <li><a class="dropdown-item" href="javascript:void(0);">Suggest edits</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="javascript:void(0);">Report bug</a></li>
-                </ul>
-              </div>
             </div>
           </div>
           <div class="card-body">
@@ -341,86 +298,58 @@
               <li class="mb-3">
                 <div class="d-flex align-items-center">
                   <div class="d-flex align-items-start">
-                    <!-- <div class="avatar me-3">
-                      <img src="{{ asset('img/icons/brands/react-label.png') }}" alt="Avatar" class="rounded-circle" />
-                    </div> -->
                     <div class="me-2">
-                      <h6 class="mb-0">React Developers</h6>
+                      <h6 class="mb-0">PRIMARY 4</h6>
                       <small class="text-muted">72 Members</small>
                     </div>
                   </div>
-                  <div class="ms-auto">
-                    <a href="javascript:;"><span class="badge bg-label-danger">Developer</span></a>
-                  </div>
                 </div>
               </li>
               <li class="mb-3">
                 <div class="d-flex align-items-center">
                   <div class="d-flex align-items-start">
-                    <!-- <div class="avatar me-3">
-                      <img src="{{ asset('img/icons/brands/support-label.png')}}" alt="Avatar" class="rounded-circle" />
-                    </div> -->
                     <div class="me-2">
-                      <h6 class="mb-0">Support Team</h6>
+                      <h6 class="mb-0">JHS 1</h6>
                       <small class="text-muted">122 Members</small>
                     </div>
                   </div>
-                  <div class="ms-auto">
-                    <a href="javascript:;"><span class="badge bg-label-primary">Support</span></a>
-                  </div>
                 </div>
               </li>
               <li class="mb-3">
                 <div class="d-flex align-items-center">
                   <div class="d-flex align-items-start">
-                    <!-- <div class="avatar me-3">
-                      <img src="{{ asset('img/icons/brands/figma-label.png')}}" alt="Avatar" class="rounded-circle" />
-                    </div> -->
                     <div class="me-2">
-                      <h6 class="mb-0">UI Designers</h6>
+                      <h6 class="mb-0">JHS 2 </h6>
                       <small class="text-muted">7 Members</small>
                     </div>
                   </div>
-                  <div class="ms-auto">
-                    <a href="javascript:;"><span class="badge bg-label-info">Designer</span></a>
-                  </div>
                 </div>
               </li>
               <li class="mb-3">
                 <div class="d-flex align-items-center">
                   <div class="d-flex align-items-start">
-                    <!-- <div class="avatar me-3">
-                      <img src="{{ asset('img/icons/brands/vue-label.png') }}" alt="Avatar" class="rounded-circle" />
-                    </div> -->
                     <div class="me-2">
-                      <h6 class="mb-0">Vue.js Developers</h6>
+                      <h6 class="mb-0">PRIMARY 6</h6>
                       <small class="text-muted">289 Members</small>
                     </div>
                   </div>
-                  <div class="ms-auto">
-                    <a href="javascript:;"><span class="badge bg-label-danger">Developer</span></a>
-                  </div>
+                  
                 </div>
               </li>
               <li class="mb-3">
                 <div class="d-flex align-items-center">
                   <div class="d-flex align-items-start">
-                    <div class="avatar me-3">
-                      <img src="{{ asset('img/icons/brands/twitter-label.png') }}" alt="Avatar" class="rounded-circle" />
-                    </div>
                     <div class="me-w">
-                      <h6 class="mb-0">Digital Marketing</h6>
+                      <h6 class="mb-0">JHS 3</h6>
                       <small class="text-muted">24 Members</small>
                     </div>
                   </div>
-                  <div class="ms-auto">
+                 <!--  <div class="ms-auto">
                     <a href="javascript:;"><span class="badge bg-label-secondary">Marketing</span></a>
-                  </div>
+                  </div> -->
                 </div>
               </li>
-              <li class="text-center">
-                <a href="javascript:;">View all teams</a>
-              </li>
+              
             </ul>
           </div>
         </div>

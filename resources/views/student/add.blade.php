@@ -341,7 +341,7 @@
                 Swal.fire({
                     icon: 'success',
                     title: 'Success',
-                    text: 'Form submitted successfully.'
+                    text: 'Data submitted successfully.'
                 });
                 
             },
