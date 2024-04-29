@@ -55,7 +55,7 @@
                               <span class="fw-medium">{{ $user->Fullname }}</span>
                             </td>
                             <td>{{ $user->Gender }}</td>
-                            <td>{{ \Carbon\Carbon::parse($user->DOB)->format('d-m-Y') }}</td>
+                            <td>{{ \Carbon\Carbon::parse($user->Birthdate)->format('d-m-Y') }}</td>
                             <td>{{ $user->Address }}</td>
                             <td>{{ \Carbon\Carbon::parse($user->AddedDate)->format('d-m-Y') }}</td>
                             <td>

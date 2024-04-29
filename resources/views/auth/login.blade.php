@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="light-style layout-wide  customizer-hide" dir="ltr" data-theme="theme-default" data-template="vertical-menu-template">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="light-style layout-wide  customizer-hide" dir="ltr" data-theme="theme-default" data-template="vertical-menu-template">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <title>{{ config('app.name') }} | Login</title>
+     <title>{{ config('app.name', 'Laravel') }}</title>
     <meta name="description" content="Most Powerful &amp; Comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers!" />
     <!-- ? PROD Only: Google Tag Manager (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
     <!-- <script>
@@ -68,17 +68,7 @@
                             </div>
                           </div>
                       @endif
-                        @if ($errors->any())
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                <div class="col-md-10" align="center" style="margin-left:30px" align="center">
-                                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                  <strong>Ops! </strong><b> {{ $error }}</b>
-                                    </div>
-                                </div>
-                            @endforeach
-                            </ul>
-                      @endif
+                       
           <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input type="text" class="form-control" id="username" name="username" placeholder="Username" autocomplete="off">

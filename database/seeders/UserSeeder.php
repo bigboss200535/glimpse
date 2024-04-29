@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
                 'Title' => $faker->title,
                 'Firstname' => $faker->firstName,
                 'Lastname' => $faker->lastName,
-                'DOB' => $faker->date,
+                'Birthdate' => $faker->date,
                 'Address' => $faker->address,
                 'Telephone' => $faker->phoneNumber,
                 'Gender' => $faker->randomElement(['Male', 'Female']),

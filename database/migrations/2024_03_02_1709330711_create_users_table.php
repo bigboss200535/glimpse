@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
 			$table->string('Firstname',50);
 			$table->string('Lastname',50);
 			$table->string('Fullname',200)->virtualAs("CONCAT(Lastname, ' ', Firstname)");
-			$table->date('DOB');
+			$table->date('Birthdate');
 			$table->text('Address')->nullable();
 			$table->string('Telephone',20);
 			$table->string('VerifyTelephone',100)->nullable();
