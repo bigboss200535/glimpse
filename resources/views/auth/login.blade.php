@@ -68,7 +68,17 @@
                             </div>
                           </div>
                       @endif
-                       
+                        @if ($errors->any())
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <div class="col-md-10" align="center" style="margin-left:30px" align="center">
+                                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                  <strong>Ops! </strong><b> {{ $error }}</b>
+                                    </div>
+                                </div>
+                            @endforeach
+                            </ul>
+                      @endif
           <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input type="text" class="form-control" id="username" name="username" placeholder="Username" autocomplete="off">
